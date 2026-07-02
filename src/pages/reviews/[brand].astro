@@ -4,6 +4,7 @@ import { getCollection, render } from 'astro:content';
 import { getAllBrands } from '@/data/brands-comprehensive';
 import { getTargetSite, targetSlug } from '@/data/target-site';
 import { brandToSlug } from '@/utils/comparison';
+import { REPORTS_PUBLIC } from '@/config/features.mjs';
 
 export async function getStaticPaths() {
   const reviews = await getCollection('reviews');
@@ -20,6 +21,15 @@ const target = getTargetSite();
 const brands = getAllBrands();
 const self = brands.find((b) => brandToSlug(b.brand) === entry.id);
 const displayName = self?.brand ?? entry.data.brand;
+
+// Soft-launch internal linking: point to other review articles instead of the
+// hidden comparison reports. Kept in rank order so top brands surface first.
+const nameBySlug = new Map(brands.map((b) => [brandToSlug(b.brand), b.brand]));
+const relatedReviews = (await getCollection('reviews'))
+  .filter((e) => e.id !== entry.id)
+  .map((e) => ({ id: e.id, label: nameBySlug.get(e.id) ?? e.data.brand }))
+  .sort((a, b) => a.label.localeCompare(b.label))
+  .slice(0, 6);
 
 // A few internal links back into the comparison graph for this brand.
 const related = [
@@ -60,19 +70,34 @@ const related = [
     </article>
 
     <aside class="related-box">
-      <h2>Related Comparisons</h2>
-      <ul class="related-list">
-        {related.map((r) => (
-          <li>
-            <a
-              href={`/reports/${r.slug}/`}
-              class:list={['related-link', { 'related-link-target': r.isTarget }]}
-            >
-              {r.label} →
-            </a>
-          </li>
-        ))}
-      </ul>
+      {REPORTS_PUBLIC ? (
+        <>
+          <h2>Related Comparisons</h2>
+          <ul class="related-list">
+            {related.map((r) => (
+              <li>
+                <a
+                  href={`/reports/${r.slug}/`}
+                  class:list={['related-link', { 'related-link-target': r.isTarget }]}
+                >
+                  {r.label} →
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : (
+        <>
+          <h2>More Reviews</h2>
+          <ul class="related-list">
+            {relatedReviews.map((r) => (
+              <li>
+                <a href={`/reviews/${r.id}/`} class="related-link">{r.label} review →</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
       <a href="/reviews" class="back-link">← Back to all reviews</a>
     </aside>
   </div>

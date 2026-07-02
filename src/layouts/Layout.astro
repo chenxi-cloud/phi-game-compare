@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css';
+import { REPORTS_PUBLIC } from '@/config/features.mjs';
 
 interface Props {
   title: string;
@@ -30,9 +31,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
           <span class="logo-text">PH Game Compare</span>
         </a>
         <nav>
-          <a href="/">Compare</a>
+          <a href="/">{REPORTS_PUBLIC ? 'Compare' : 'Home'}</a>
           <a href="/reviews">Reviews</a>
-          <a href="/all-comparisons">All Comparisons</a>
+          {REPORTS_PUBLIC && <a href="/all-comparisons">All Comparisons</a>}
         </nav>
       </div>
     </header>
@@ -46,7 +47,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
         <nav class="footer-nav">
           <a href="/">Home</a>
           <a href="/reviews">Reviews</a>
-          <a href="/all-comparisons">All Comparisons (Sitemap)</a>
+          {REPORTS_PUBLIC && <a href="/all-comparisons">All Comparisons (Sitemap)</a>}
         </nav>
         <p class="disclaimer">
           18+ only. Gamble responsibly. This site provides informational comparisons only and does not operate any gaming services.

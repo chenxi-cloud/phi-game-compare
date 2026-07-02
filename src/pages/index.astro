@@ -1,11 +1,30 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import SiteSelector from '@/components/SiteSelector.astro';
-import { getBrandOptions } from '@/data/brands-comprehensive';
+import { getBrandOptions, getAllBrands } from '@/data/brands-comprehensive';
 import { getTargetSite, targetSlug } from '@/data/target-site';
+import { brandToSlug } from '@/utils/comparison';
+import { getCollection } from 'astro:content';
+import { REPORTS_PUBLIC } from '@/config/features.mjs';
 
 const brands = getBrandOptions();
 const target = getTargetSite();
+
+// Featured reviews for the soft-launch homepage (rank order → top brands first).
+const allBrands = getAllBrands();
+const rankBySlug = new Map(allBrands.map((b, i) => [brandToSlug(b.brand), i]));
+const nameBySlug = new Map(allBrands.map((b) => [brandToSlug(b.brand), b.brand]));
+const reviews = (await getCollection('reviews'))
+  .map((entry) => ({
+    id: entry.id,
+    title: entry.data.title,
+    description: entry.data.seo_description,
+    displayName: nameBySlug.get(entry.id) ?? entry.data.brand,
+    rank: rankBySlug.get(entry.id) ?? Number.MAX_SAFE_INTEGER,
+  }))
+  .sort((a, b) => a.rank - b.rank);
+const featuredReviews = reviews.slice(0, 12);
+const reviewCount = reviews.length;
 
 function pairSlug(aIdx: number, bIdx: number): string {
   const a = brands[aIdx]!;
@@ -40,49 +59,75 @@ const featured = featuredIndexPairs.map(([a, b]) => ({
 }));
 ---
 
-<Layout title="Compare PH Gaming Platforms">
+<Layout title={REPORTS_PUBLIC ? 'Compare PH Gaming Platforms' : 'PH Gaming Platform Reviews'}>
   <div class="container">
     <section class="hero">
-      <h1>Philippines Online Gaming Platform Comparison</h1>
+      <h1>{REPORTS_PUBLIC ? 'Philippines Online Gaming Platform Comparison' : 'Philippines Online Gaming Platform Reviews'}</h1>
       <p class="hero-subtitle">
-        Side-by-side reviews of PAGCOR-licensed platforms — payments, support, brand heat, performance, and games.
+        {REPORTS_PUBLIC
+          ? 'Side-by-side reviews of PAGCOR-licensed platforms — payments, support, brand heat, performance, and games.'
+          : 'In-depth Taglish reviews ng mga PAGCOR-licensed platforms — app download, login, bonuses, GCash cashout at legit checks.'}
       </p>
     </section>
 
-    <SiteSelector />
+    {REPORTS_PUBLIC && (
+      <>
+        <SiteSelector />
+
+        <section class="recent-reports">
+          <h2 class="section-title">Recommended Matchups</h2>
+          <p class="section-subtitle">See how {target.brand} stacks up against the top platforms.</p>
+          <ul class="report-list">
+            {recommended.map((report) => (
+              <li class="report-item report-item-target">
+                <a href={`/reports/${report.slug}/`} class="report-link">
+                  <div class="report-info">
+                    <h3>{report.title}</h3>
+                    <div class="report-meta">
+                      <span class="target-tag">{report.a}</span>
+                      <span>vs {report.b}</span>
+                    </div>
+                  </div>
+                  <span class="arrow">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="recent-reports">
+          <h2 class="section-title">Featured Comparisons</h2>
+          <p class="section-subtitle">Popular head-to-head matchups to get you started.</p>
+          <ul class="report-list">
+            {featured.map((report) => (
+              <li class="report-item">
+                <a href={`/reports/${report.slug}/`} class="report-link">
+                  <div class="report-info">
+                    <h3>{report.title}</h3>
+                    <div class="report-meta">
+                      <span>{report.a} · {report.b}</span>
+                    </div>
+                  </div>
+                  <span class="arrow">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </>
+    )}
 
     <section class="recent-reports">
-      <h2 class="section-title">Recommended Matchups</h2>
-      <p class="section-subtitle">See how {target.brand} stacks up against the top platforms.</p>
+      <h2 class="section-title">Featured Reviews</h2>
+      <p class="section-subtitle">Honest, no-BS Taglish reviews ng pinaka-hinahanap na platforms.</p>
       <ul class="report-list">
-        {recommended.map((report) => (
-          <li class="report-item report-item-target">
-            <a href={`/reports/${report.slug}/`} class="report-link">
-              <div class="report-info">
-                <h3>{report.title}</h3>
-                <div class="report-meta">
-                  <span class="target-tag">{report.a}</span>
-                  <span>vs {report.b}</span>
-                </div>
-              </div>
-              <span class="arrow">→</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    <section class="recent-reports">
-      <h2 class="section-title">Featured Comparisons</h2>
-      <p class="section-subtitle">Popular head-to-head matchups to get you started.</p>
-      <ul class="report-list">
-        {featured.map((report) => (
+        {featuredReviews.map((r) => (
           <li class="report-item">
-            <a href={`/reports/${report.slug}/`} class="report-link">
+            <a href={`/reviews/${r.id}/`} class="report-link">
               <div class="report-info">
-                <h3>{report.title}</h3>
+                <h3>{r.displayName}</h3>
                 <div class="report-meta">
-                  <span>{report.a} · {report.b}</span>
+                  <span>Full review →</span>
                 </div>
               </div>
               <span class="arrow">→</span>
@@ -94,24 +139,26 @@ const featured = featuredIndexPairs.map(([a, b]) => ({
 
     <section class="browse-more">
       <h2 class="section-title">Browse Everything</h2>
-      <p class="section-subtitle">Explore all our in-depth reviews and head-to-head comparison reports.</p>
+      <p class="section-subtitle">Explore all our in-depth platform reviews.</p>
       <div class="browse-grid">
         <a href="/reviews" class="browse-card">
           <span class="browse-icon">📝</span>
           <span class="browse-text">
             <strong>All Reviews</strong>
-            <small>In-depth guides sa bawat platform</small>
+            <small>Lahat ng {reviewCount} platform reviews</small>
           </span>
           <span class="arrow">→</span>
         </a>
-        <a href="/all-comparisons" class="browse-card">
-          <span class="browse-icon">📊</span>
-          <span class="browse-text">
-            <strong>All Comparison Reports</strong>
-            <small>Buong sitemap ng lahat ng matchups</small>
-          </span>
-          <span class="arrow">→</span>
-        </a>
+        {REPORTS_PUBLIC && (
+          <a href="/all-comparisons" class="browse-card">
+            <span class="browse-icon">📊</span>
+            <span class="browse-text">
+              <strong>All Comparison Reports</strong>
+              <small>Buong sitemap ng lahat ng matchups</small>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+        )}
       </div>
     </section>
   </div>

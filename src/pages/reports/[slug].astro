@@ -8,6 +8,7 @@ import { getBrandLogoUrl } from '@/utils/brand-logo';
 import { applySpintaxSummaries } from '@/utils/spintax';
 import { getTargetSite, outboundRel, outboundHref } from '@/data/target-site';
 import { getCollection } from 'astro:content';
+import { REPORTS_PUBLIC } from '@/config/features.mjs';
 import comprehensive from '../../../docs/phi_brands_comprehensive.json';
 
 interface RouteProps {
@@ -16,6 +17,9 @@ interface RouteProps {
 }
 
 export async function getStaticPaths() {
+  // Soft-launch: keep the report pages in the repo but do not generate them.
+  if (!REPORTS_PUBLIC) return [];
+
   const brands = comprehensive.brands as BrandProfile[];
   const target = getTargetSite();
   const routes: Array<{ slug: string; brandA: BrandProfile; brandB: BrandProfile }> = [];

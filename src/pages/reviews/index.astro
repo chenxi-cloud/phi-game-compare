@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import { getAllBrands } from '@/data/brands-comprehensive';
 import { brandToSlug } from '@/utils/comparison';
+import { REPORTS_PUBLIC } from '@/config/features.mjs';
 
 const brands = getAllBrands();
 const nameBySlug = new Map(brands.map((b) => [brandToSlug(b.brand), b.brand]));
@@ -53,9 +54,11 @@ const reviews = (await getCollection('reviews'))
       </ul>
     )}
 
-    <p class="cross-link">
-      Looking for head-to-head data? Browse the <a href="/all-comparisons">full comparison index</a>.
-    </p>
+    {REPORTS_PUBLIC && (
+      <p class="cross-link">
+        Looking for head-to-head data? Browse the <a href="/all-comparisons">full comparison index</a>.
+      </p>
+    )}
   </div>
 </Layout>
 

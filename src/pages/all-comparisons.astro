@@ -3,6 +3,12 @@ import Layout from '@/layouts/Layout.astro';
 import { getAllBrands } from '@/data/brands-comprehensive';
 import { getTargetSite, targetSlug } from '@/data/target-site';
 import { brandToSlug } from '@/utils/comparison';
+import { REPORTS_PUBLIC } from '@/config/features.mjs';
+
+// Soft-launch: the comparison index is hidden — bounce visitors to reviews.
+if (!REPORTS_PUBLIC) {
+  return Astro.redirect('/reviews');
+}
 
 const brands = getAllBrands();
 const target = getTargetSite();

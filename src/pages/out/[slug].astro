@@ -3,9 +3,13 @@ import type { BrandProfile } from '@/types/brand';
 import { brandToSlug } from '@/utils/comparison';
 import { getTargetSite } from '@/data/target-site';
 import { outboundRel } from '@/data/target-site';
+import { REPORTS_PUBLIC } from '@/config/features.mjs';
 import comprehensive from '../../../docs/phi_brands_comprehensive.json';
 
 export async function getStaticPaths() {
+  // Cloaked redirects are only used by the (hidden) report pages.
+  if (!REPORTS_PUBLIC) return [];
+
   const brands = comprehensive.brands as BrandProfile[];
   const target = getTargetSite();
 
