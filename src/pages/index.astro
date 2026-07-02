@@ -91,6 +91,29 @@ const featured = featuredIndexPairs.map(([a, b]) => ({
         ))}
       </ul>
     </section>
+
+    <section class="browse-more">
+      <h2 class="section-title">Browse Everything</h2>
+      <p class="section-subtitle">Explore all our in-depth reviews and head-to-head comparison reports.</p>
+      <div class="browse-grid">
+        <a href="/reviews" class="browse-card">
+          <span class="browse-icon">📝</span>
+          <span class="browse-text">
+            <strong>All Reviews</strong>
+            <small>In-depth guides sa bawat platform</small>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="/all-comparisons" class="browse-card">
+          <span class="browse-icon">📊</span>
+          <span class="browse-text">
+            <strong>All Comparison Reports</strong>
+            <small>Buong sitemap ng lahat ng matchups</small>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
   </div>
 </Layout>
 
@@ -183,5 +206,53 @@ const featured = featuredIndexPairs.map(([a, b]) => ({
     color: var(--color-primary);
     font-size: 1.25rem;
     flex-shrink: 0;
+  }
+
+  .browse-more {
+    margin-top: 4rem;
+  }
+
+  .browse-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .browse-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    color: inherit;
+    transition: border-color 0.2s;
+  }
+
+  .browse-card:hover {
+    border-color: var(--color-primary);
+    color: inherit;
+  }
+
+  .browse-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+  }
+
+  .browse-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+  }
+
+  .browse-text strong {
+    font-size: 1.05rem;
+  }
+
+  .browse-text small {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
   }
 </style>

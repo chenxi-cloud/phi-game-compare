@@ -58,6 +58,40 @@ const reviewIds = new Set((await getCollection('reviews')).map((e) => e.id));
 const brandReviews = [brandA, brandB]
   .map((b) => ({ brand: b, slug: brandToSlug(b.brand) }))
   .filter((b) => reviewIds.has(b.slug));
+
+// FAQ derived from the comparison result — feeds both a visible section and
+// FAQPage JSON-LD so the report can qualify for rich snippets.
+const withdrawalWinner = comparison.modules.find((m) => m.id === 'withdrawal')?.winnerName;
+const overallWinner = comparison.overallWinnerName;
+
+const faqItems = [
+  {
+    q: `Alin ang mas mabilis mag-withdraw, ${brandA.brand} o ${brandB.brand}?`,
+    a: withdrawalWinner
+      ? `Base sa aming withdrawal-speed comparison, mas mabilis mag-cash out ang ${withdrawalWinner} sa dalawa.`
+      : `Magkapantay ang withdrawal speed ng ${brandA.brand} at ${brandB.brand} base sa aming pagsusuri.`,
+  },
+  {
+    q: `Alin ang mas magandang piliin, ${brandA.brand} o ${brandB.brand}?`,
+    a: overallWinner
+      ? `Sa aming head-to-head sa withdrawal, customer support, popularity, performance at games, nangunguna ang ${overallWinner} (${comparison.moduleWins.a}-${comparison.moduleWins.b} sa mga module).`
+      : `Halos magkapantay ang ${brandA.brand} at ${brandB.brand} sa aming pagsusuri — depende na sa iyong prayoridad kung alin ang pipiliin.`,
+  },
+  {
+    q: `Legit ba ang ${brandA.brand} at ${brandB.brand}?`,
+    a: `Parehong nag-o-operate bilang PAGCOR-licensed / regulated na platform ang ${brandA.brand} at ${brandB.brand}. Laging i-verify ang opisyal na site at tapusin ang account verification bago mag-withdraw.`,
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
 ---
 
 <Layout title={comparison.title} description={comparison.overallSummary}>
@@ -129,10 +163,24 @@ const brandReviews = [brandA, brandB]
       </section>
     )}
 
+    <section class="faq-section">
+      <h2 class="section-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        {faqItems.map((item) => (
+          <details class="faq-item">
+            <summary class="faq-q">{item.q}</summary>
+            <p class="faq-a">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
     <footer class="report-footer">
       <a href="/" class="btn btn-secondary">← Compare Other Platforms</a>
     </footer>
   </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} is:inline />
 </Layout>
 
 <style>
@@ -302,6 +350,55 @@ const brandReviews = [brandA, brandB]
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--color-accent);
+  }
+
+  .faq-section {
+    margin-bottom: 3rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+  }
+
+  .faq-item[open] {
+    border-color: var(--color-primary);
+  }
+
+  .faq-q {
+    font-weight: 700;
+    color: var(--color-text);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .faq-q::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-q::before {
+    content: '+';
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-right: 0.6rem;
+  }
+
+  .faq-item[open] .faq-q::before {
+    content: '−';
+  }
+
+  .faq-a {
+    margin-top: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
   }
 
   .report-footer {
