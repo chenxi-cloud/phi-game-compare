@@ -6,6 +6,8 @@ import type { BrandProfile } from '@/types/brand';
 import { buildBrandComparison, brandToSlug } from '@/utils/comparison';
 import { getBrandLogoUrl } from '@/utils/brand-logo';
 import { applySpintaxSummaries } from '@/utils/spintax';
+import { getTargetSite, outboundRel, outboundHref } from '@/data/target-site';
+import { getCollection } from 'astro:content';
 import comprehensive from '../../../docs/phi_brands_comprehensive.json';
 
 interface RouteProps {
@@ -15,8 +17,19 @@ interface RouteProps {
 
 export async function getStaticPaths() {
   const brands = comprehensive.brands as BrandProfile[];
+  const target = getTargetSite();
   const routes: Array<{ slug: string; brandA: BrandProfile; brandB: BrandProfile }> = [];
 
+  // Target site vs every other brand (our promoted site always first).
+  for (const brand of brands) {
+    routes.push({
+      slug: `${brandToSlug(target.brand)}-vs-${brandToSlug(brand.brand)}`,
+      brandA: target,
+      brandB: brand,
+    });
+  }
+
+  // Every unique brand pair.
   for (let i = 0; i < brands.length; i++) {
     for (let j = i + 1; j < brands.length; j++) {
       const brandA = brands[i]!;
@@ -40,6 +53,11 @@ const comparison = applySpintaxSummaries(
   buildBrandComparison(brandA, brandB),
   Astro.params.slug!,
 );
+
+const reviewIds = new Set((await getCollection('reviews')).map((e) => e.id));
+const brandReviews = [brandA, brandB]
+  .map((b) => ({ brand: b, slug: brandToSlug(b.brand) }))
+  .filter((b) => reviewIds.has(b.slug));
 ---
 
 <Layout title={comparison.title} description={comparison.overallSummary}>
@@ -53,21 +71,31 @@ const comparison = applySpintaxSummaries(
     <header class="report-header">
       <div class="brand-cards">
         {[brandA, brandB].map((b) => (
-          <div class="brand-card">
+          <div class:list={['brand-card', { 'brand-card-target': b.is_target }]}>
             <img src={getBrandLogoUrl(b.brand)} alt={b.brand} width="64" height="64" />
             <div class="brand-info">
-              <h2>{b.brand}</h2>
+              <h2>
+                {b.brand}
+                {b.is_target && <span class="recommended-badge">Recommended</span>}
+              </h2>
               <span class="tier-badge">Tier {b.tier}</span>
-              {b.top_ranking_url && (
-                <a
-                  href={b.top_ranking_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="site-link"
-                >
-                  Visit Site →
-                </a>
-              )}
+              <div class="brand-links">
+                {b.top_ranking_url && (
+                  <a
+                    href={outboundHref(b)}
+                    target="_blank"
+                    rel={outboundRel(b)}
+                    class:list={['site-link', { 'site-link-target': b.is_target }]}
+                  >
+                    Visit Site →
+                  </a>
+                )}
+                {reviewIds.has(brandToSlug(b.brand)) && (
+                  <a href={`/reviews/${brandToSlug(b.brand)}/`} class="review-inline-link">
+                    Read our {b.brand} review →
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
@@ -85,6 +113,21 @@ const comparison = applySpintaxSummaries(
         ))}
       </div>
     </div>
+
+    {brandReviews.length > 0 && (
+      <section class="review-links">
+        <h2 class="section-heading">In-Depth Reviews</h2>
+        <p class="review-links-sub">Read the full hands-on review before you decide:</p>
+        <div class="review-link-cards">
+          {brandReviews.map((r) => (
+            <a href={`/reviews/${r.slug}/`} class="review-link-card">
+              <span class="review-link-title">{r.brand.brand} Review</span>
+              <span class="review-link-cta">Read full review →</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
     <footer class="report-footer">
       <a href="/" class="btn btn-secondary">← Compare Other Platforms</a>
@@ -129,6 +172,11 @@ const comparison = applySpintaxSummaries(
     min-width: 260px;
   }
 
+  .brand-card-target {
+    border-color: var(--color-accent);
+    background: linear-gradient(135deg, rgba(0, 200, 150, 0.1) 0%, var(--color-surface) 60%);
+  }
+
   .brand-card img {
     border-radius: var(--radius-sm);
     background: var(--color-bg);
@@ -139,6 +187,26 @@ const comparison = applySpintaxSummaries(
     font-size: 1.15rem;
     font-weight: 700;
     margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .recommended-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: #04231b;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .site-link-target {
+    color: var(--color-accent);
+    font-weight: 700;
   }
 
   .tier-badge {
@@ -152,9 +220,25 @@ const comparison = applySpintaxSummaries(
     margin-bottom: 0.35rem;
   }
 
+  .brand-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    margin-top: 0.15rem;
+  }
+
   .site-link {
     display: block;
     font-size: 0.85rem;
+  }
+
+  .review-inline-link {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .review-inline-link:hover {
+    color: var(--color-primary);
   }
 
   .report-header h1 {
@@ -176,6 +260,48 @@ const comparison = applySpintaxSummaries(
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+  }
+
+  .review-links {
+    margin-bottom: 3rem;
+  }
+
+  .review-links-sub {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .review-link-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .review-link-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.1rem 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+  }
+
+  .review-link-card:hover {
+    border-color: var(--color-primary);
+  }
+
+  .review-link-title {
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .review-link-cta {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-accent);
   }
 
   .report-footer {

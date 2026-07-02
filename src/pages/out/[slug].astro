@@ -1,0 +1,66 @@
+---
+import type { BrandProfile } from '@/types/brand';
+import { brandToSlug } from '@/utils/comparison';
+import { getTargetSite } from '@/data/target-site';
+import { outboundRel } from '@/data/target-site';
+import comprehensive from '../../../docs/phi_brands_comprehensive.json';
+
+export async function getStaticPaths() {
+  const brands = comprehensive.brands as BrandProfile[];
+  const target = getTargetSite();
+
+  const seen = new Set<string>();
+  const routes: Array<{ slug: string; brand: BrandProfile }> = [];
+
+  for (const brand of [target, ...brands]) {
+    if (!brand.top_ranking_url) continue;
+    const slug = brandToSlug(brand.brand);
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+    routes.push({ slug, brand });
+  }
+
+  return routes.map((route) => ({
+    params: { slug: route.slug },
+    props: { brand: route.brand },
+  }));
+}
+
+const { brand } = Astro.props as { brand: BrandProfile };
+const url = brand.top_ranking_url!;
+const rel = outboundRel(brand);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content={`0; url=${url}`} />
+    <link rel="canonical" href={url} />
+    <title>Redirecting to {brand.brand}…</title>
+    <script is:inline define:vars={{ url }}>
+      window.location.replace(url);
+    </script>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background: #0f141b;
+        color: #e6edf3;
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+      a { color: #f5a623; }
+    </style>
+  </head>
+  <body>
+    <p>
+      Redirecting to {brand.brand}… If you are not redirected automatically,
+      <a href={url} target="_blank" rel={rel}>click here</a>.
+    </p>
+  </body>
+</html>

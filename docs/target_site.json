@@ -1,0 +1,30 @@
+{
+  "rank": 0,
+  "tier": 1,
+  "brand": "JiliPhil",
+  "status": "ok",
+  "is_target": true,
+  "avg_search_volume_last_2_months": 3850000,
+  "search_volume": 3720000,
+  "top_ranking_url": "https://www.jiliphil.vip/register?affiliateCode=seo005",
+  "game_richness": "High",
+  "hot_games": [
+    { "game_type": "RNG", "vendor": "JL", "game_name": "Super Ace" },
+    { "game_type": "RNG", "vendor": "PG", "game_name": "Fortune Gems" },
+    { "game_type": "FISH", "vendor": "JL", "game_name": "Mega Fishing" },
+    { "game_type": "LIVE", "vendor": "EG", "game_name": "Crazy Time" },
+    { "game_type": "PVP", "vendor": "JL", "game_name": "Tongits Go" }
+  ],
+  "performance": {
+    "profile": "Flagship affiliate platform with global CDN, native-grade optimization and hardened anti-hijacking",
+    "fcp_seconds": 0.6,
+    "dns_anti_hijacking_percent": 99.9,
+    "ui_fps": 60
+  },
+  "customer_service": {
+    "response_speed": "Fast",
+    "satisfaction_score": 5,
+    "response_speed_score": 3,
+    "overall_score": 8
+  }
+}

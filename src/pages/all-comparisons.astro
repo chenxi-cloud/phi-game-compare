@@ -1,0 +1,292 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { getAllBrands } from '@/data/brands-comprehensive';
+import { getTargetSite, targetSlug } from '@/data/target-site';
+import { brandToSlug } from '@/utils/comparison';
+
+const brands = getAllBrands();
+const target = getTargetSite();
+
+interface Indexed {
+  name: string;
+  slug: string;
+  index: number;
+}
+
+const withIndex: Indexed[] = brands.map((b, index) => ({
+  name: b.brand,
+  slug: brandToSlug(b.brand),
+  index,
+}));
+
+function pairSlug(a: Indexed, b: Indexed): string {
+  const [first, second] = a.index < b.index ? [a, b] : [b, a];
+  return `${first.slug}-vs-${second.slug}`;
+}
+
+interface Matchup {
+  slug: string;
+  label: string;
+  isTarget: boolean;
+}
+
+interface Entry {
+  name: string;
+  count: number;
+  matchups: Matchup[];
+}
+
+// Every brand lists all of its head-to-head pages (including the target matchup),
+// so each of the generated pages is reachable from at least one brand section.
+const brandEntries: Entry[] = withIndex.map((brand) => {
+  const matchups: Matchup[] = [
+    {
+      slug: `${targetSlug}-vs-${brand.slug}`,
+      label: `${brand.name} vs ${target.brand}`,
+      isTarget: true,
+    },
+    ...withIndex
+      .filter((other) => other.slug !== brand.slug)
+      .map((other) => ({
+        slug: pairSlug(brand, other),
+        label: `${brand.name} vs ${other.name}`,
+        isTarget: false,
+      })),
+  ];
+  return { name: brand.name, count: matchups.length, matchups };
+});
+
+// The promoted target gets its own entry (grouped under its first letter).
+const targetEntry: Entry = {
+  name: target.brand,
+  count: withIndex.length,
+  matchups: withIndex.map((other) => ({
+    slug: `${targetSlug}-vs-${other.slug}`,
+    label: `${target.brand} vs ${other.name}`,
+    isTarget: true,
+  })),
+};
+
+const allEntries = [...brandEntries, targetEntry];
+
+const totalPages =
+  (withIndex.length * (withIndex.length - 1)) / 2 + withIndex.length;
+
+// Group A-Z (non-alphabetic first characters land in "#").
+const groups = new Map<string, Entry[]>();
+for (const entry of allEntries) {
+  const first = entry.name.charAt(0).toUpperCase();
+  const key = /[A-Z]/.test(first) ? first : '#';
+  if (!groups.has(key)) groups.set(key, []);
+  groups.get(key)!.push(entry);
+}
+
+const grouped = [...groups.keys()]
+  .sort()
+  .map((letter) => ({
+    letter,
+    entries: groups.get(letter)!.sort((a, b) => a.name.localeCompare(b.name)),
+  }));
+
+const letters = grouped.map((g) => g.letter);
+---
+
+<Layout
+  title="All Comparisons"
+  description="Complete A-Z index of every head-to-head platform comparison on PH Game Compare."
+>
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>All Comparisons</span>
+    </nav>
+
+    <header class="page-header">
+      <h1>All Comparisons</h1>
+      <p class="page-subtitle">
+        A complete index of all {totalPages.toLocaleString('en-US')} head-to-head
+        reports. Browse by first letter, then expand a platform to see every matchup.
+      </p>
+    </header>
+
+    <nav class="alpha-nav" aria-label="Jump to letter">
+      {letters.map((letter) => (
+        <a href={`#letter-${letter}`}>{letter}</a>
+      ))}
+    </nav>
+
+    {grouped.map((group) => (
+      <section class="letter-section" id={`letter-${group.letter}`}>
+        <h2 class="letter-heading">{group.letter}</h2>
+        <div class="brand-groups">
+          {group.entries.map((entry) => (
+            <details class="brand-group">
+              <summary>
+                <span class="brand-name">{entry.name}</span>
+                <span class="brand-count">{entry.count} matchups</span>
+              </summary>
+              <ul class="matchup-list">
+                {entry.matchups.map((m) => (
+                  <li>
+                    <a
+                      href={`/reports/${m.slug}/`}
+                      class:list={['matchup-link', { 'matchup-link-target': m.isTarget }]}
+                    >
+                      {m.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</Layout>
+
+<style>
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .breadcrumb span:last-child {
+    color: var(--color-text);
+  }
+
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-header h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+  }
+
+  .page-subtitle {
+    color: var(--color-text-muted);
+    max-width: 640px;
+  }
+
+  .alpha-nav {
+    position: sticky;
+    top: 64px;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    padding: 0.75rem;
+    margin-bottom: 2rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .alpha-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 0.4rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    border-radius: var(--radius-sm);
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .alpha-nav a:hover {
+    background: var(--color-primary);
+    color: #04231b;
+  }
+
+  .letter-section {
+    margin-bottom: 2.5rem;
+    scroll-margin-top: 120px;
+  }
+
+  .letter-heading {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-border);
+    margin-bottom: 1rem;
+  }
+
+  .brand-groups {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .brand-group {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .brand-group summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+  }
+
+  .brand-group summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .brand-group summary::after {
+    content: '▸';
+    color: var(--color-text-muted);
+    transition: transform 0.2s;
+  }
+
+  .brand-group[open] summary::after {
+    transform: rotate(90deg);
+  }
+
+  .brand-count {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+  }
+
+  .matchup-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.25rem 1rem;
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .matchup-link {
+    display: block;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    border-bottom: 1px solid transparent;
+  }
+
+  .matchup-link:hover {
+    color: var(--color-primary);
+  }
+
+  .matchup-link-target {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+</style>

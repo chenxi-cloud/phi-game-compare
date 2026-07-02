@@ -1,0 +1,209 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+import { getAllBrands } from '@/data/brands-comprehensive';
+import { getTargetSite, targetSlug } from '@/data/target-site';
+import { brandToSlug } from '@/utils/comparison';
+
+export async function getStaticPaths() {
+  const reviews = await getCollection('reviews');
+  return reviews.map((entry) => ({
+    params: { brand: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const target = getTargetSite();
+const brands = getAllBrands();
+const self = brands.find((b) => brandToSlug(b.brand) === entry.id);
+const displayName = self?.brand ?? entry.data.brand;
+
+// A few internal links back into the comparison graph for this brand.
+const related = [
+  {
+    slug: `${targetSlug}-vs-${entry.id}`,
+    label: `${target.brand} vs ${displayName}`,
+    isTarget: true,
+  },
+  ...brands
+    .filter((b) => brandToSlug(b.brand) !== entry.id)
+    .slice(0, 5)
+    .map((b) => {
+      const other = { slug: brandToSlug(b.brand), index: brands.indexOf(b) };
+      const me = { slug: entry.id, index: self ? brands.indexOf(self) : Number.MAX_SAFE_INTEGER };
+      const [first, second] = me.index < other.index ? [me, other] : [other, me];
+      return {
+        slug: `${first.slug}-vs-${second.slug}`,
+        label: `${displayName} vs ${b.brand}`,
+        isTarget: false,
+      };
+    }),
+];
+---
+
+<Layout title={entry.data.title} description={entry.data.seo_description}>
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/reviews">Reviews</a>
+      <span>/</span>
+      <span>{displayName}</span>
+    </nav>
+
+    <article class="review-article">
+      <Content />
+    </article>
+
+    <aside class="related-box">
+      <h2>Related Comparisons</h2>
+      <ul class="related-list">
+        {related.map((r) => (
+          <li>
+            <a
+              href={`/reports/${r.slug}/`}
+              class:list={['related-link', { 'related-link-target': r.isTarget }]}
+            >
+              {r.label} →
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a href="/reviews" class="back-link">← Back to all reviews</a>
+    </aside>
+  </div>
+</Layout>
+
+<style>
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-primary);
+  }
+
+  .breadcrumb span:last-child {
+    color: var(--color-text);
+  }
+
+  .review-article {
+    max-width: 760px;
+    line-height: 1.75;
+  }
+
+  .review-article :global(h1),
+  .review-article :global(h2) {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 800;
+    margin: 2.25rem 0 1rem;
+    line-height: 1.25;
+  }
+
+  .review-article :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .review-article :global(h3) {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 1.75rem 0 0.75rem;
+  }
+
+  .review-article :global(p) {
+    margin-bottom: 1.1rem;
+    color: var(--color-text);
+  }
+
+  .review-article :global(ul),
+  .review-article :global(ol) {
+    margin: 0 0 1.1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .review-article :global(li) {
+    color: var(--color-text);
+  }
+
+  .review-article :global(a) {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .review-article :global(a:hover) {
+    color: var(--color-primary-hover);
+  }
+
+  .review-article :global(strong) {
+    color: var(--color-text);
+    font-weight: 700;
+  }
+
+  .review-article :global(blockquote) {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    background: linear-gradient(135deg, rgba(0, 200, 150, 0.1) 0%, var(--color-surface) 70%);
+    border-radius: var(--radius-sm);
+  }
+
+  .review-article :global(blockquote p) {
+    margin: 0;
+  }
+
+  .related-box {
+    max-width: 760px;
+    margin: 3rem 0 2rem;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .related-box h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .related-list {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .related-link {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  .related-link:hover {
+    color: var(--color-primary);
+  }
+
+  .related-link-target {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .back-link {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .back-link:hover {
+    color: var(--color-primary);
+  }
+</style>

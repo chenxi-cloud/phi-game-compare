@@ -1,38 +1,63 @@
 ---
 import { getBrandOptions } from '@/data/brands-comprehensive';
+import { getTargetSite, targetSlug } from '@/data/target-site';
 
-const brands = getBrandOptions();
+const target = getTargetSite();
+const brandOptions = getBrandOptions();
+
+const options = [
+  { name: target.brand, slug: targetSlug, index: -1, isTarget: true },
+  ...brandOptions.map((b) => ({ ...b, isTarget: false })),
+];
 ---
 
-<section class="selector" id="brand-selector" data-brands={JSON.stringify(brands)}>
+<section class="selector" id="brand-selector" data-brands={JSON.stringify(options)}>
   <div class="selector-header">
     <h2 class="section-title">Compare Any Two Platforms</h2>
     <p class="section-subtitle">
-      Pick two brands from the dropdowns below and view the full head-to-head report.
+      Start typing a platform name (e.g. "Ji") to filter, pick two brands, and view the full head-to-head report.
     </p>
   </div>
 
   <div class="selector-body">
-    <div class="select-group">
-      <label for="brand-a">Platform A</label>
-      <select id="brand-a" class="brand-select">
-        <option value="" selected disabled>Select a platform…</option>
-        {brands.map((b) => (
-          <option value={b.slug}>{b.name}</option>
-        ))}
-      </select>
+    <div class="combo" data-combo="a">
+      <label for="combo-input-a">Platform A</label>
+      <div class="combo-control">
+        <input
+          type="text"
+          id="combo-input-a"
+          class="combo-input"
+          role="combobox"
+          aria-expanded="false"
+          aria-autocomplete="list"
+          aria-controls="combo-list-a"
+          placeholder="Search platform…"
+          autocomplete="off"
+        />
+        <button type="button" class="combo-clear" aria-label="Clear selection" hidden>×</button>
+        <ul class="combo-list" id="combo-list-a" role="listbox" hidden></ul>
+      </div>
     </div>
 
     <span class="vs">VS</span>
 
-    <div class="select-group">
-      <label for="brand-b">Platform B</label>
-      <select id="brand-b" class="brand-select">
-        <option value="" selected disabled>Select a platform…</option>
-        {brands.map((b) => (
-          <option value={b.slug}>{b.name}</option>
-        ))}
-      </select>
+    <div class="combo" data-combo="b">
+      <label for="combo-input-b">Platform B</label>
+      <div class="combo-control">
+        <input
+          type="text"
+          id="combo-input-b"
+          class="combo-input"
+          role="combobox"
+          aria-expanded="false"
+          aria-autocomplete="list"
+          aria-controls="combo-list-b"
+          placeholder="Search platform…"
+          autocomplete="off"
+        />
+        <button type="button" class="combo-clear" aria-label="Clear selection" hidden>×</button>
+        <ul class="combo-list" id="combo-list-b" role="listbox" hidden></ul>
+      </div>
     </div>
   </div>
 
@@ -49,63 +74,167 @@ const brands = getBrandOptions();
     name: string;
     slug: string;
     index: number;
+    isTarget: boolean;
   }
 
   const root = document.getElementById('brand-selector') as HTMLElement;
   const brands: BrandOption[] = JSON.parse(root.dataset.brands ?? '[]');
   const bySlug = new Map(brands.map((b) => [b.slug, b]));
 
-  const selectA = document.getElementById('brand-a') as HTMLSelectElement;
-  const selectB = document.getElementById('brand-b') as HTMLSelectElement;
   const btn = document.getElementById('view-report-btn') as HTMLButtonElement;
   const hint = document.getElementById('selection-hint') as HTMLParagraphElement;
 
+  const selected: { a: BrandOption | null; b: BrandOption | null } = {
+    a: null,
+    b: null,
+  };
+
   function buildSlug(a: BrandOption, b: BrandOption): string {
-    // Routes are generated in source-array order (lower index first).
+    if (a.isTarget) return `${a.slug}-vs-${b.slug}`;
+    if (b.isTarget) return `${b.slug}-vs-${a.slug}`;
     const [first, second] = a.index < b.index ? [a, b] : [b, a];
     return `${first.slug}-vs-${second.slug}`;
   }
 
-  function currentPair(): { a: BrandOption; b: BrandOption } | null {
-    const a = bySlug.get(selectA.value);
-    const b = bySlug.get(selectB.value);
-    if (!a || !b) return null;
-    if (a.slug === b.slug) return null;
-    return { a, b };
-  }
-
   function updateUI() {
-    const a = bySlug.get(selectA.value);
-    const b = bySlug.get(selectB.value);
-
+    const { a, b } = selected;
     if (!a || !b) {
       btn.disabled = true;
       hint.textContent = 'Select two different platforms';
       hint.classList.remove('ready');
       return;
     }
-
     if (a.slug === b.slug) {
       btn.disabled = true;
       hint.textContent = 'Please pick two different platforms';
       hint.classList.remove('ready');
       return;
     }
-
     btn.disabled = false;
     hint.textContent = `${a.name} vs ${b.name} — report ready`;
     hint.classList.add('ready');
   }
 
-  function goToReport() {
-    const pair = currentPair();
-    if (!pair) return;
-    window.location.href = `/reports/${buildSlug(pair.a, pair.b)}/`;
+  function label(o: BrandOption): string {
+    return o.isTarget ? `${o.name} (Recommended)` : o.name;
   }
 
-  selectA.addEventListener('change', updateUI);
-  selectB.addEventListener('change', updateUI);
-  btn.addEventListener('click', goToReport);
+  class Combobox {
+    key: 'a' | 'b';
+    input: HTMLInputElement;
+    list: HTMLUListElement;
+    clearBtn: HTMLButtonElement;
+    activeIndex = -1;
+    filtered: BrandOption[] = [];
+
+    constructor(el: HTMLElement, key: 'a' | 'b') {
+      this.key = key;
+      this.input = el.querySelector('.combo-input') as HTMLInputElement;
+      this.list = el.querySelector('.combo-list') as HTMLUListElement;
+      this.clearBtn = el.querySelector('.combo-clear') as HTMLButtonElement;
+
+      this.input.addEventListener('focus', () => this.open());
+      this.input.addEventListener('input', () => {
+        selected[this.key] = null;
+        this.clearBtn.hidden = this.input.value.length === 0;
+        this.open();
+        updateUI();
+      });
+      this.input.addEventListener('keydown', (e) => this.onKeydown(e));
+      this.clearBtn.addEventListener('click', () => this.clear());
+
+      document.addEventListener('click', (e) => {
+        if (!el.contains(e.target as Node)) this.close();
+      });
+    }
+
+    open() {
+      const q = this.input.value.trim().toLowerCase();
+      this.filtered = brands.filter((b) => b.name.toLowerCase().includes(q));
+      this.render();
+      this.list.hidden = this.filtered.length === 0;
+      this.input.setAttribute('aria-expanded', String(!this.list.hidden));
+    }
+
+    close() {
+      this.list.hidden = true;
+      this.activeIndex = -1;
+      this.input.setAttribute('aria-expanded', 'false');
+    }
+
+    render() {
+      this.list.innerHTML = '';
+      this.filtered.forEach((o, i) => {
+        const li = document.createElement('li');
+        li.className = 'combo-option';
+        if (o.isTarget) li.classList.add('combo-option-target');
+        if (i === this.activeIndex) li.classList.add('active');
+        li.setAttribute('role', 'option');
+        li.textContent = label(o);
+        li.addEventListener('mousedown', (e) => {
+          e.preventDefault();
+          this.select(o);
+        });
+        this.list.appendChild(li);
+      });
+    }
+
+    select(o: BrandOption) {
+      selected[this.key] = o;
+      this.input.value = label(o);
+      this.clearBtn.hidden = false;
+      this.close();
+      updateUI();
+    }
+
+    clear() {
+      selected[this.key] = null;
+      this.input.value = '';
+      this.clearBtn.hidden = true;
+      this.input.focus();
+      this.open();
+      updateUI();
+    }
+
+    onKeydown(e: KeyboardEvent) {
+      if (this.list.hidden && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+        this.open();
+        return;
+      }
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        this.activeIndex = Math.min(this.activeIndex + 1, this.filtered.length - 1);
+        this.render();
+        this.scrollActiveIntoView();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        this.activeIndex = Math.max(this.activeIndex - 1, 0);
+        this.render();
+        this.scrollActiveIntoView();
+      } else if (e.key === 'Enter') {
+        if (this.activeIndex >= 0 && this.filtered[this.activeIndex]) {
+          e.preventDefault();
+          this.select(this.filtered[this.activeIndex]!);
+        }
+      } else if (e.key === 'Escape') {
+        this.close();
+      }
+    }
+
+    scrollActiveIntoView() {
+      const active = this.list.children[this.activeIndex] as HTMLElement | undefined;
+      active?.scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  new Combobox(root.querySelector('[data-combo="a"]') as HTMLElement, 'a');
+  new Combobox(root.querySelector('[data-combo="b"]') as HTMLElement, 'b');
+
+  btn.addEventListener('click', () => {
+    const { a, b } = selected;
+    if (!a || !b || a.slug === b.slug) return;
+    window.location.href = `/reports/${buildSlug(a, b)}/`;
+  });
 
   updateUI();
 </script>
@@ -127,7 +256,7 @@ const brands = getBrandOptions();
     margin-bottom: 1rem;
   }
 
-  .select-group {
+  .combo {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -135,33 +264,88 @@ const brands = getBrandOptions();
     min-width: 220px;
   }
 
-  .select-group label {
+  .combo label {
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--color-text-muted);
   }
 
-  .brand-select {
-    appearance: none;
+  .combo-control {
+    position: relative;
+  }
+
+  .combo-input {
     width: 100%;
-    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    padding: 0.75rem 2.25rem 0.75rem 1rem;
     font-size: 1rem;
     color: var(--color-text);
     background-color: var(--color-bg);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b9cb3' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: 1.1rem;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
-    cursor: pointer;
     transition: border-color 0.2s;
   }
 
-  .brand-select:hover,
-  .brand-select:focus {
+  .combo-input:hover,
+  .combo-input:focus {
     border-color: var(--color-primary);
     outline: none;
+  }
+
+  .combo-clear {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: var(--color-text-muted);
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .combo-clear:hover {
+    color: var(--color-text);
+    background: var(--color-border);
+  }
+
+  .combo-list {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    z-index: 50;
+    max-height: 280px;
+    overflow-y: auto;
+    list-style: none;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .combo-option {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    cursor: pointer;
+  }
+
+  .combo-option:hover,
+  .combo-option.active {
+    background: var(--color-bg);
+    color: var(--color-primary);
+  }
+
+  .combo-option-target {
+    color: var(--color-accent);
+    font-weight: 600;
   }
 
   .vs {

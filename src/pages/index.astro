@@ -2,8 +2,10 @@
 import Layout from '@/layouts/Layout.astro';
 import SiteSelector from '@/components/SiteSelector.astro';
 import { getBrandOptions } from '@/data/brands-comprehensive';
+import { getTargetSite, targetSlug } from '@/data/target-site';
 
 const brands = getBrandOptions();
+const target = getTargetSite();
 
 function pairSlug(aIdx: number, bIdx: number): string {
   const a = brands[aIdx]!;
@@ -11,6 +13,14 @@ function pairSlug(aIdx: number, bIdx: number): string {
   const [first, second] = a.index < b.index ? [a, b] : [b, a];
   return `${first.slug}-vs-${second.slug}`;
 }
+
+// Recommended: our promoted site vs the top-ranked brands.
+const recommended = brands.slice(0, 6).map((b) => ({
+  slug: `${targetSlug}-vs-${b.slug}`,
+  title: `${target.brand} vs ${b.name}`,
+  a: target.brand,
+  b: b.name,
+}));
 
 // Featured comparisons built from the top-ranked brands (indices in rank order).
 const featuredIndexPairs: Array<[number, number]> = [
@@ -40,6 +50,27 @@ const featured = featuredIndexPairs.map(([a, b]) => ({
     </section>
 
     <SiteSelector />
+
+    <section class="recent-reports">
+      <h2 class="section-title">Recommended Matchups</h2>
+      <p class="section-subtitle">See how {target.brand} stacks up against the top platforms.</p>
+      <ul class="report-list">
+        {recommended.map((report) => (
+          <li class="report-item report-item-target">
+            <a href={`/reports/${report.slug}/`} class="report-link">
+              <div class="report-info">
+                <h3>{report.title}</h3>
+                <div class="report-meta">
+                  <span class="target-tag">{report.a}</span>
+                  <span>vs {report.b}</span>
+                </div>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
 
     <section class="recent-reports">
       <h2 class="section-title">Featured Comparisons</h2>
@@ -107,6 +138,20 @@ const featured = featuredIndexPairs.map(([a, b]) => ({
 
   .report-item:hover {
     border-color: var(--color-primary);
+  }
+
+  .report-item-target {
+    border-color: var(--color-accent);
+    background: linear-gradient(135deg, rgba(0, 200, 150, 0.08) 0%, var(--color-surface) 60%);
+  }
+
+  .report-item-target:hover {
+    border-color: var(--color-accent);
+  }
+
+  .target-tag {
+    color: var(--color-accent);
+    font-weight: 700;
   }
 
   .report-link {

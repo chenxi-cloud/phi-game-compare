@@ -30,6 +30,8 @@ export interface BrandProfile {
   hot_games: HotGame[];
   performance: PerformanceData;
   customer_service: CustomerServiceData;
+  /** True only for our own promoted site (outbound link is dofollow). */
+  is_target?: boolean;
 }
 
 export type CompareSide = 'a' | 'b' | 'tie';

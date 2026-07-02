@@ -74,7 +74,6 @@ function buildPopularityModule(brandA: BrandProfile, brandB: BrandProfile): Comp
   const winner = pickWinner(volA, volB);
 
   const rows: CompareRow[] = [
-    { label: 'Heat Rank', valueA: `#${brandA.rank}`, valueB: `#${brandB.rank}`, winner: pickWinner(brandB.rank, brandA.rank) },
     { label: 'Heat Index', valueA: formatVolume(volA), valueB: formatVolume(volB), winner },
     { label: 'Recent Activity Index', valueA: formatVolume(searchA), valueB: formatVolume(searchB), winner: pickWinner(searchA, searchB) },
   ];

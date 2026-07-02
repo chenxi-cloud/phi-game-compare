@@ -122,9 +122,9 @@
       "Evaluating the frontend rendering and anti-ban capabilities,"
     ],
     "data_statement": [
-      "{Winner} takes the lead with an FCP of {FCP_Winner} and {FPS_Winner} FPS, slightly edging out {Loser} ({FCP_Loser} FCP).",
+      "{Winner} takes the lead with an FCP of {FCP_Winner} and {FPS_Winner}, slightly edging out {Loser} ({FCP_Loser} FCP).",
       "while {Loser} is optimized, {Winner} performs marginally better overall with {DNS_Winner} DNS resilience.",
-      "{Winner} shows superior server response, hitting {FPS_Winner} FPS compared to {Loser}'s UI performance."
+      "{Winner} shows superior server response, hitting {FPS_Winner} compared to {Loser}'s UI performance."
     ],
     "conclusion": [
       "Smooth ang gaming experience, iwas lag lalo na pag nag-su-Super Ace ka.",
