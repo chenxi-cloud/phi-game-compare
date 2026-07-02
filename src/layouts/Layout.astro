@@ -1,0 +1,120 @@
+---
+import '@/styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Compare the best PAGCOR-licensed online gaming platforms in the Philippines.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | PH Game Compare</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo">
+          <span class="logo-icon">⚖️</span>
+          <span class="logo-text">PH Game Compare</span>
+        </a>
+        <nav>
+          <a href="/">Compare</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="disclaimer">
+          18+ only. Gamble responsibly. This site provides informational comparisons only and does not operate any gaming services.
+          All listed platforms should hold valid PAGCOR or offshore licenses. Please verify licensing before playing.
+        </p>
+        <p class="copyright">&copy; {new Date().getFullYear()} PH Game Compare. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-surface);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .logo:hover {
+    color: var(--color-primary);
+  }
+
+  .logo-icon {
+    font-size: 1.4rem;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  nav a:hover {
+    color: var(--color-primary);
+  }
+
+  main {
+    flex: 1;
+    padding: 2rem 0 4rem;
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface);
+    padding: 2rem 0;
+  }
+
+  .disclaimer {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .copyright {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+</style>

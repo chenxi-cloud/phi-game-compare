@@ -1,0 +1,218 @@
+---
+import type { BrandComparison } from '@/types/brand';
+import { formatVolume } from '@/utils/comparison';
+
+interface Props {
+  comparison: BrandComparison;
+}
+
+const { comparison } = Astro.props;
+const { brandA, brandB, moduleWins, overallWinner, overallWinnerName } = comparison;
+---
+
+<section class="overall-summary">
+  <h2>Overall Comparison</h2>
+
+  <div class="scoreboard">
+    <div class="brand-score">
+      <span class="brand-name">{brandA.brand}</span>
+      <span class="score">{moduleWins.a}</span>
+      <span class="score-label">categories won</span>
+    </div>
+    <div class="vs-divider">VS</div>
+    <div class="brand-score">
+      <span class="brand-name">{brandB.brand}</span>
+      <span class="score">{moduleWins.b}</span>
+      <span class="score-label">categories won</span>
+    </div>
+  </div>
+
+  {moduleWins.tie > 0 && (
+    <p class="tie-note">{moduleWins.tie} categories tied</p>
+  )}
+
+  {overallWinner && overallWinner !== 'tie' && overallWinnerName && (
+    <div class="overall-verdict">
+      <span class="verdict-label">Overall Pick</span>
+      <span class="verdict-brand">{overallWinnerName}</span>
+    </div>
+  )}
+
+  {overallWinner === 'tie' && (
+    <div class="overall-verdict tie">
+      <span class="verdict-label">Overall Verdict</span>
+      <span class="verdict-brand">Too close to call</span>
+    </div>
+  )}
+
+  <div class="quick-stats">
+    <div class="stat-card">
+      <span class="stat-label">Heat Index</span>
+      <div class="stat-compare">
+        <span>{formatVolume(brandA.avg_search_volume_last_2_months)}</span>
+        <span class="stat-vs">vs</span>
+        <span>{formatVolume(brandB.avg_search_volume_last_2_months)}</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Platform Tier</span>
+      <div class="stat-compare">
+        <span>Tier {brandA.tier}</span>
+        <span class="stat-vs">vs</span>
+        <span>Tier {brandB.tier}</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Game Variety</span>
+      <div class="stat-compare">
+        <span>{brandA.game_richness}</span>
+        <span class="stat-vs">vs</span>
+        <span>{brandB.game_richness}</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">CS Overall Score</span>
+      <div class="stat-compare">
+        <span>{brandA.customer_service.overall_score}/8</span>
+        <span class="stat-vs">vs</span>
+        <span>{brandB.customer_service.overall_score}/8</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="overall-text">{comparison.overallSummary}</p>
+</section>
+
+<style>
+  .overall-summary {
+    background: linear-gradient(135deg, rgba(245, 166, 35, 0.08) 0%, var(--color-surface) 60%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .overall-summary h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+
+  .scoreboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .brand-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 140px;
+  }
+
+  .brand-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .score {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+  }
+
+  .score-label {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .vs-divider {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text-muted);
+  }
+
+  .tie-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .overall-verdict {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 200, 150, 0.08);
+    border-radius: var(--radius-sm);
+  }
+
+  .overall-verdict.tie {
+    background: rgba(139, 156, 179, 0.08);
+  }
+
+  .verdict-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+  }
+
+  .verdict-brand {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-accent);
+  }
+
+  .overall-verdict.tie .verdict-brand {
+    color: var(--color-text);
+  }
+
+  .quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stat-card {
+    background: var(--color-bg);
+    border-radius: var(--radius-sm);
+    padding: 0.875rem 1rem;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.35rem;
+  }
+
+  .stat-compare {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .stat-vs {
+    color: var(--color-text-muted);
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
+  .overall-text {
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    font-size: 1rem;
+  }
+</style>

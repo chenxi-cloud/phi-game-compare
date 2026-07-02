@@ -1,0 +1,142 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import SiteSelector from '@/components/SiteSelector.astro';
+import { getBrandOptions } from '@/data/brands-comprehensive';
+
+const brands = getBrandOptions();
+
+function pairSlug(aIdx: number, bIdx: number): string {
+  const a = brands[aIdx]!;
+  const b = brands[bIdx]!;
+  const [first, second] = a.index < b.index ? [a, b] : [b, a];
+  return `${first.slug}-vs-${second.slug}`;
+}
+
+// Featured comparisons built from the top-ranked brands (indices in rank order).
+const featuredIndexPairs: Array<[number, number]> = [
+  [0, 1],
+  [0, 2],
+  [1, 2],
+  [0, 3],
+  [3, 4],
+  [1, 4],
+];
+
+const featured = featuredIndexPairs.map(([a, b]) => ({
+  slug: pairSlug(a, b),
+  title: `${brands[a]!.name} vs ${brands[b]!.name}`,
+  a: brands[a]!.name,
+  b: brands[b]!.name,
+}));
+---
+
+<Layout title="Compare PH Gaming Platforms">
+  <div class="container">
+    <section class="hero">
+      <h1>Philippines Online Gaming Platform Comparison</h1>
+      <p class="hero-subtitle">
+        Side-by-side reviews of PAGCOR-licensed platforms — payments, support, brand heat, performance, and games.
+      </p>
+    </section>
+
+    <SiteSelector />
+
+    <section class="recent-reports">
+      <h2 class="section-title">Featured Comparisons</h2>
+      <p class="section-subtitle">Popular head-to-head matchups to get you started.</p>
+      <ul class="report-list">
+        {featured.map((report) => (
+          <li class="report-item">
+            <a href={`/reports/${report.slug}/`} class="report-link">
+              <div class="report-info">
+                <h3>{report.title}</h3>
+                <div class="report-meta">
+                  <span>{report.a} · {report.b}</span>
+                </div>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 2rem 0 3rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .recent-reports {
+    margin-top: 4rem;
+  }
+
+  .report-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .report-item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+  }
+
+  .report-item:hover {
+    border-color: var(--color-primary);
+  }
+
+  .report-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    color: inherit;
+    gap: 1rem;
+  }
+
+  .report-link:hover {
+    color: inherit;
+  }
+
+  .report-info h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .report-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .arrow {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+</style>

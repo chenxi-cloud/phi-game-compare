@@ -1,0 +1,49 @@
+{
+  "performance_metrics_distribution": {
+    "tier_1": {
+      "description": "合规巨头与直营大盘，顶级 CDN 与原生级优化",
+      "fcp_seconds": {
+        "min": 0.8,
+        "max": 1.5
+      },
+      "dns_anti_hijacking_percent": {
+        "min": 98.5,
+        "max": 99.9
+      },
+      "ui_fps": {
+        "min": 54,
+        "max": 60
+      }
+    },
+    "tier_2": {
+      "description": "常规大盘与成熟代理网，中规中矩的技术架构",
+      "fcp_seconds": {
+        "min": 1.8,
+        "max": 3.5
+      },
+      "dns_anti_hijacking_percent": {
+        "min": 82.0,
+        "max": 94.5
+      },
+      "ui_fps": {
+        "min": 35,
+        "max": 48
+      }
+    },
+    "tier_3": {
+      "description": "野鸡盘与换皮站群，廉价服务器与严重内存泄漏",
+      "fcp_seconds": {
+        "min": 4.5,
+        "max": 8.5
+      },
+      "dns_anti_hijacking_percent": {
+        "min": 45.0,
+        "max": 75.0
+      },
+      "ui_fps": {
+        "min": 15,
+        "max": 28
+      }
+    }
+  }
+}

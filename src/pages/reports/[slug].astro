@@ -1,0 +1,185 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import ComparisonSummary from '@/components/comparison/ComparisonSummary.astro';
+import CompareModule from '@/components/comparison/CompareModule.astro';
+import type { BrandProfile } from '@/types/brand';
+import { buildBrandComparison, brandToSlug } from '@/utils/comparison';
+import { getBrandLogoUrl } from '@/utils/brand-logo';
+import { applySpintaxSummaries } from '@/utils/spintax';
+import comprehensive from '../../../docs/phi_brands_comprehensive.json';
+
+interface RouteProps {
+  brandA: BrandProfile;
+  brandB: BrandProfile;
+}
+
+export async function getStaticPaths() {
+  const brands = comprehensive.brands as BrandProfile[];
+  const routes: Array<{ slug: string; brandA: BrandProfile; brandB: BrandProfile }> = [];
+
+  for (let i = 0; i < brands.length; i++) {
+    for (let j = i + 1; j < brands.length; j++) {
+      const brandA = brands[i]!;
+      const brandB = brands[j]!;
+      routes.push({
+        slug: `${brandToSlug(brandA.brand)}-vs-${brandToSlug(brandB.brand)}`,
+        brandA,
+        brandB,
+      });
+    }
+  }
+
+  return routes.map((route) => ({
+    params: { slug: route.slug },
+    props: { brandA: route.brandA, brandB: route.brandB },
+  }));
+}
+
+const { brandA, brandB } = Astro.props as RouteProps;
+const comparison = applySpintaxSummaries(
+  buildBrandComparison(brandA, brandB),
+  Astro.params.slug!,
+);
+---
+
+<Layout title={comparison.title} description={comparison.overallSummary}>
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>{comparison.title}</span>
+    </nav>
+
+    <header class="report-header">
+      <div class="brand-cards">
+        {[brandA, brandB].map((b) => (
+          <div class="brand-card">
+            <img src={getBrandLogoUrl(b.brand)} alt={b.brand} width="64" height="64" />
+            <div class="brand-info">
+              <h2>{b.brand}</h2>
+              <span class="tier-badge">Tier {b.tier}</span>
+              {b.top_ranking_url && (
+                <a
+                  href={b.top_ranking_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="site-link"
+                >
+                  Visit Site →
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+      <h1>{comparison.title} — Full Comparison</h1>
+    </header>
+
+    <ComparisonSummary comparison={comparison} />
+
+    <div class="modules-section">
+      <h2 class="section-heading">Detailed Breakdown</h2>
+      <div class="modules-list">
+        {comparison.modules.map((mod) => (
+          <CompareModule module={mod} brandA={brandA} brandB={brandB} />
+        ))}
+      </div>
+    </div>
+
+    <footer class="report-footer">
+      <a href="/" class="btn btn-secondary">← Compare Other Platforms</a>
+    </footer>
+  </div>
+</Layout>
+
+<style>
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .breadcrumb span:last-child {
+    color: var(--color-text);
+  }
+
+  .report-header {
+    margin-bottom: 2rem;
+  }
+
+  .brand-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .brand-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    flex: 1;
+    min-width: 260px;
+  }
+
+  .brand-card img {
+    border-radius: var(--radius-sm);
+    background: var(--color-bg);
+    padding: 4px;
+  }
+
+  .brand-info h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .tier-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(245, 166, 35, 0.15);
+    color: var(--color-primary);
+    margin-bottom: 0.35rem;
+  }
+
+  .site-link {
+    display: block;
+    font-size: 0.85rem;
+  }
+
+  .report-header h1 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+  }
+
+  .modules-section {
+    margin-bottom: 3rem;
+  }
+
+  .section-heading {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+  }
+
+  .modules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .report-footer {
+    border-top: 1px solid var(--color-border);
+    padding-top: 2rem;
+  }
+</style>

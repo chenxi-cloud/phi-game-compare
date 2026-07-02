@@ -1,0 +1,152 @@
+{
+  "_composer_instructions": {
+    "description": "DO NOT render this node in UI. This is for AI developer context only.",
+    "how_to_use": "When generating the summary text for each module, randomly select one string from 'intro', one from 'data_statement', and one from 'conclusion'. Concatenate them with a space to form a complete paragraph.",
+    "placeholder_mapping": {
+      "overall_summary": {
+        "{Brand_A}": "Name of the first brand (e.g., PlayTime)",
+        "{Brand_B}": "Name of the second brand (e.g., BingoPlus)",
+        "{Winner}": "The overall recommended brand",
+        "{Score_A}": "Total winning categories for Brand A (e.g., 2)",
+        "{Score_B}": "Total winning categories for Brand B (e.g., 0)"
+      },
+      "cashout_module": {
+        "{Brand_A}": "Name of the first brand",
+        "{Brand_B}": "Name of the second brand",
+        "{Speed_A}": "Speed rating of Brand A (e.g., Fast)",
+        "{Time_A}": "Estimated arrival time for Brand A (e.g., within 1 hour)",
+        "{Time_B}": "Estimated arrival time for Brand B"
+      },
+      "cs_module": {
+        "{Brand_A}": "Name of the first brand",
+        "{Brand_B}": "Name of the second brand",
+        "{Score_A}": "CS total score for Brand A (e.g., 7)",
+        "{Score_B}": "CS total score for Brand B",
+        "{Response_A}": "Response speed rating for A (e.g., Medium)"
+      },
+      "brand_heat_module": {
+        "{Winner}": "The brand with higher heat index",
+        "{Loser}": "The brand with lower heat index",
+        "{Heat_A}": "Search volume/heat index of Winner (e.g., 3,279,420)",
+        "{Heat_B}": "Search volume/heat index of Loser"
+      },
+      "performance_module": {
+        "{Winner}": "The brand with better overall performance",
+        "{Loser}": "The brand with lower performance",
+        "{FCP_Winner}": "FCP time of the winning brand (e.g., 1s)",
+        "{FCP_Loser}": "FCP time of the losing brand",
+        "{DNS_Winner}": "DNS resilience percentage of the winner",
+        "{FPS_Winner}": "UI framerate of the winner"
+      },
+      "game_variety_module": {
+        "{Brand_A}": "Name of the first brand",
+        "{Brand_B}": "Name of the second brand",
+        "{TopGame_A}": "Top #1 game of Brand A (e.g., Pusoy Go)",
+        "{TopGame_B}": "Top #1 game of Brand B (e.g., Chinese New Year 2)",
+        "{Types_A}": "Game categories for Brand A (e.g., PVP, FISH, RNG)"
+      }
+    }
+  },
+  "overall_summary": {
+    "intro": [
+      "After running a comprehensive head-to-head comparison across 5 core metrics,",
+      "Wrapping up our automated testing and player feedback analysis,",
+      "Based on our standardized data scraping and node monitoring,"
+    ],
+    "data_statement": [
+      "the final verdict shows {Brand_A} securing {Score_A} points, edging out {Brand_B} ({Score_B} points).",
+      "{Brand_A} leads the board with {Score_A} winning categories against {Brand_B}'s {Score_B}.",
+      "the numbers clearly favor {Brand_A} ({Score_A} wins) over {Brand_B} ({Score_B} wins) in this matchup."
+    ],
+    "conclusion": [
+      "Overall, {Winner} is the top recommendation for players seeking reliability.",
+      "Kaya kung gusto mo ng solid na experience, {Winner} ang pinaka-safe na choice ngayon.",
+      "For peace of mind and better gameplay, highly recommended namin ang {Winner}."
+    ]
+  },
+  "cashout_module": {
+    "intro": [
+      "When it comes to processing withdrawals—the most critical factor for players—",
+      "Testing the GCash routing efficiency during peak hours,",
+      "Based on our payment gateway latency checks,"
+    ],
+    "data_statement": [
+      "both platforms performed decently, with {Brand_A} and {Brand_B} clearing funds {Time_A}.",
+      "{Brand_A} clocks in at a {Speed_A} pace ({Time_A}), mirroring {Brand_B}'s reliable speed.",
+      "we observed a tie here; {Brand_A} and {Brand_B} both process payouts {Time_A}."
+    ],
+    "conclusion": [
+      "Walang hassle sa cashout, parehong pasok agad sa wallet mo.",
+      "For cashouts, pantay lang sila—you won't have to deal with long pending times.",
+      "Mabilis mag-release ng pera both sides, so iwas kaba pag nanalo ka ng malaki."
+    ]
+  },
+  "cs_module": {
+    "intro": [
+      "Evaluating the customer support responsiveness via live chat,",
+      "Based on our CS probing and dispute resolution data,",
+      "Looking at how fast they handle player concerns,"
+    ],
+    "data_statement": [
+      "{Brand_A} scored {Score_A}/8 with a {Response_A} response rate, exactly matching {Brand_B}'s {Score_B}/8.",
+      "both {Brand_A} and {Brand_B} achieved a solid CS score of {Score_A}/8.",
+      "the support teams for both {Brand_A} and {Brand_B} demonstrated a {Response_A} reaction time, scoring {Score_A}/8."
+    ],
+    "conclusion": [
+      "Pwede na pagtiyagaan if you encounter minor GCash deposit issues.",
+      "Okay naman ang CS nila, sumasagot agad pag may kailangan ka i-verify.",
+      "Not the fastest, but they get the job done pag may problem sa account mo."
+    ]
+  },
+  "brand_heat_module": {
+    "intro": [
+      "Looking at the local search volume and brand visibility,",
+      "Based on Ahrefs traffic data and Facebook community mentions in the Philippines,",
+      "Analyzing the active player base metrics,"
+    ],
+    "data_statement": [
+      "{Winner} dominates the space with a search index of {Heat_A}, leaving {Loser} behind at {Heat_B}.",
+      "{Winner} secures the #1 spot ({Heat_A} searches), proving it has a larger footprint than {Loser} ({Heat_B}).",
+      "there is a significant gap in popularity, with {Winner} tracking {Heat_A} monthly searches compared to {Loser}'s {Heat_B}."
+    ],
+    "conclusion": [
+      "Mas sikat talaga ang {Winner} ngayon sa mga online casino groups.",
+      "Kung saan madaming tao, dun tayo. {Winner} is clearly the crowd favorite right now.",
+      "Halatang mas trusted ng mga Pinoy ang {Winner} based on these traffic numbers."
+    ]
+  },
+  "performance_module": {
+    "intro": [
+      "On the technical side of things,",
+      "Measuring the platform's stability on local mobile networks like Globe and Smart,",
+      "Evaluating the frontend rendering and anti-ban capabilities,"
+    ],
+    "data_statement": [
+      "{Winner} takes the lead with an FCP of {FCP_Winner} and {FPS_Winner} FPS, slightly edging out {Loser} ({FCP_Loser} FCP).",
+      "while {Loser} is optimized, {Winner} performs marginally better overall with {DNS_Winner} DNS resilience.",
+      "{Winner} shows superior server response, hitting {FPS_Winner} FPS compared to {Loser}'s UI performance."
+    ],
+    "conclusion": [
+      "Smooth ang gaming experience, iwas lag lalo na pag nag-su-Super Ace ka.",
+      "Sobrang bilis mag-load ng lobby ng {Winner}, no annoying white screen delays.",
+      "Walang buffer kahit naka-data ka lang, perfect for mobile players ang {Winner}."
+    ]
+  },
+  "game_variety_module": {
+    "intro": [
+      "Diving into the game libraries and software providers,",
+      "For players who want diverse betting options,",
+      "Checking out their catalog for local favorites,"
+    ],
+    "data_statement": [
+      "{Brand_A} focuses heavily on {Types_A} featuring {TopGame_A}, while {Brand_B} attracts players with {TopGame_B}.",
+      "both platforms offer high variety. {Brand_A} boasts hits like {TopGame_A}, whereas {Brand_B} is known for {TopGame_B}.",
+      "you'll find {Types_A} dominating {Brand_A}'s lobby (like {TopGame_A}), compared to {Brand_B}'s focus on {TopGame_B}."
+    ],
+    "conclusion": [
+      "Kahit ano trip mo, mapa-sabong o slots, you won't run out of options here.",
+      "Boredom is not an issue, daming pwedeng tayaan to multiply your bankroll.",
+      "Solid ang game choices, panalo ka na agad sa dami ng options."
+    ]
+  }
+}

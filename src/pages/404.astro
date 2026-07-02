@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="Page Not Found">
+  <div class="container not-found">
+    <h1>404</h1>
+    <p>The comparison report you're looking for doesn't exist yet.</p>
+    <a href="/" class="btn btn-primary">Back to Compare</a>
+  </div>
+</Layout>
+
+<style>
+  .not-found {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .not-found h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .not-found p {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+</style>

@@ -1,0 +1,2059 @@
+{
+  "source_file": "docs/games.txt",
+  "cleaning_rules": {
+    "game_name": "取下划线(_)前半部分，剔除汉字后缀",
+    "dedup_key": [
+      "game_type",
+      "vendor",
+      "game_name"
+    ],
+    "two_column_sections": {
+      "53-55": "LOTTERY",
+      "56-105": "FISH",
+      "107-156": "LIVE",
+      "158-207": "PVP",
+      "209-258": "RNG",
+      "260-308": "SPT",
+      "365-377": "FISH"
+    }
+  },
+  "stats": {
+    "total_raw_rows": 366,
+    "unique_rows": 302,
+    "duplicate_rows_removed": 64,
+    "by_type": {
+      "FISH": 62,
+      "LIVE": 52,
+      "LOTTERY": 2,
+      "PVP": 50,
+      "RNG": 87,
+      "SPT": 49
+    }
+  },
+  "games": [
+    {
+      "game_type": "FISH",
+      "vendor": "AW",
+      "game_name": "Aladdin Adventure"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "AW",
+      "game_name": "Circus"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "AW",
+      "game_name": "Ice & Fire"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "AW",
+      "game_name": "Jackypot Frenzy"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "AW",
+      "game_name": "Kung Fu Meow"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "AW",
+      "game_name": "Lucky Buddha"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "AW",
+      "game_name": "Money Tree"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "AW",
+      "game_name": "Mr Fortune"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "AW",
+      "game_name": "SuperStar"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "BT",
+      "game_name": "Bird'sParadise"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "CQ9",
+      "game_name": "Hero Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "CQ9",
+      "game_name": "Oneshot Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "CQ9",
+      "game_name": "Onestick Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "CQ9",
+      "game_name": "Paradise"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "CQ9",
+      "game_name": "Paradise 2"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "DRS",
+      "game_name": "Dino Hunter"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "DRS",
+      "game_name": "Gods Slash Fish"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "FC",
+      "game_name": "Bao Chuan Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "FC",
+      "game_name": "Fa Chai Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "FC",
+      "game_name": "Fierce Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "FC",
+      "game_name": "Gods Grant Fortune"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "FC",
+      "game_name": "Monkey King Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "FC",
+      "game_name": "Star Hunter"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "FTG",
+      "game_name": "Ocean Palace Loot"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "FTG",
+      "game_name": "Space War"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JDB",
+      "game_name": "Cai Shen Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JDB",
+      "game_name": "Dragon Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JDB",
+      "game_name": "Dragon Master"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JDB",
+      "game_name": "Dragon of Demons"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JDB",
+      "game_name": "FISHING LEGEND"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JDB",
+      "game_name": "Fishing YiLuFa"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JDB",
+      "game_name": "Five Dragons Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "All-star Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Bombing Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Boom Legend"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Circus Jackpot"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Dinosaur Tycoon"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Dinosaur Tycoon II"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Dragon Fortune"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Fortune King Jackpot"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "FORTUNE ZOMBIE"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Happy Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Jackpot Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Jackpot Fishing 2"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Mega Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Ocean King Jackpot"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Royal Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "SAS",
+      "game_name": "Fishermen Gold"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "SWG",
+      "game_name": "Cash Cow"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Bombing Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Boom Legend"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Dinosaur Tycoon"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Dinosaur Tycoon II"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Dragon Fortune"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Fortune Zombie Lightning"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Happy Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Happy Fishing Lightning"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Jackpot Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Mega Fishing"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Ocean King Jackpot"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Royal Shooter"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TP",
+      "game_name": "Twoyeah Jackpot Fishing"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "DG",
+      "game_name": "Baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "DG",
+      "game_name": "blockchain baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Always 8 Baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Always 9 Baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Craps"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Crazy Time"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Crazy Time A"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Dragon Tiger"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Funky Time"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Golden Wealth Baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Ice Fishing"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Korean Golden Wealth Baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Lightning Baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Lightning Roulette"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Lightning Storm"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Mega Ball"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Monopoly Big Baller"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "MONOPOLY Live"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "No Commission Baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Prosperity Tree Baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Speed Baccarat A"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Speed Baccarat B"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Speed Baccarat D"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Super Color Game"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Super Speed Baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EZ",
+      "game_name": "EZ Dealer Roulette"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EZ",
+      "game_name": "EZ Dealer Roulette Bengali"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EZ",
+      "game_name": "EZ Dealer Roulette Savanna"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EZ",
+      "game_name": "Italian Roulette"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EZ",
+      "game_name": "Ruleta del Sol"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "MT",
+      "game_name": "Baccarat AHT01"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "MT",
+      "game_name": "Baccarat AHT02"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "PP",
+      "game_name": "Baccarat 1"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "PP",
+      "game_name": "One Blackjack 5 -Turkish"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "PP",
+      "game_name": "Roulette 6  Turkish"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "PP",
+      "game_name": "Speed Baccarat 1"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "PP",
+      "game_name": "Speed Baccarat 2"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "PP",
+      "game_name": "Vietnamese Speed Baccarat 3"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "PRE",
+      "game_name": "Baccarat"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "Baccarat 1"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "Baccarat 2"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT 3"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT 4"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT 5"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT C01"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT C04"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT C05"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT C06"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT C07"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT C08"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT C09"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "SEX",
+      "game_name": "BACCARAT C10"
+    },
+    {
+      "game_type": "LOTTERY",
+      "vendor": "BGO",
+      "game_name": "Bingo Pilipino Live"
+    },
+    {
+      "game_type": "LOTTERY",
+      "vendor": "GPI",
+      "game_name": "Keno"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "7X",
+      "game_name": "Tongits"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "7X",
+      "game_name": "Tongits Butasan"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "7X",
+      "game_name": "Tongits Joker"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "BSP",
+      "game_name": "Black jack(3D)"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "BSP",
+      "game_name": "RUMMY"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "BSP",
+      "game_name": "Texas holdem"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "GFG",
+      "game_name": "Baccarat"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "GFG",
+      "game_name": "Banker Three-Facecard"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "GFG",
+      "game_name": "Dragon Tiger Game"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "GFG",
+      "game_name": "Four Cards Up Banker Bull-Bull"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "GFG",
+      "game_name": "No Commission Baccarat"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JDB",
+      "game_name": "Dragon Tiger-Joker Bonus"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JDB",
+      "game_name": "Pusoy Rush"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "Andar Bahar"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "Blackjack"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "Blackjack Lucky Ladies"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "Domino Go"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "Ludo Quick"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "Mini Flush"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "Pusoy Go"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "TeenPatti 20-20"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "Tongits Go"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "Ultimate Texas Hold'em"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "7 Up 7 Down"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "7 Up 7 Down Rush"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Baccarat"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Bonus Dice"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Coin Toss"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Colour Game"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Dice Duet"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Dragon Tiger 2"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "European Roulette"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Fan Tan Classic"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Minesweeper"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Poker Roulette"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Sic Bo"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Thai Fish Prawn Crab"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Thai Hi Lo 2"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Tongits"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KM",
+      "game_name": "Toon Crash"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KP",
+      "game_name": "Black Jack"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KS",
+      "game_name": "Baccarat1"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KS",
+      "game_name": "Baccarat2"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KS",
+      "game_name": "Baccarat3"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "KS",
+      "game_name": "Baccarat4"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "R88",
+      "game_name": "Dragon Tiger"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "SWG",
+      "game_name": "Baccarat"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "WOW",
+      "game_name": "Baccarat"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "WOW",
+      "game_name": "Color Game"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "WOW",
+      "game_name": "Roulette"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "AUX",
+      "game_name": "Sweet Gummy"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "BNG",
+      "game_name": "Lucky Penny"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Chinese New Year 2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Chinese New Year Moreways"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "JUNGLE BANG BANG"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Lucky Fortunes"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Poker Win"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Sugar Bang Bang"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Sugar Bang Bang 2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Super Elements"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "HS",
+      "game_name": "Le Viking"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JDB",
+      "game_name": "Magic Ace WILD LOCK"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "3 Super Ace"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Boxing King"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Circus Joker 4096"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Color Game"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Crazy777"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Fortune Coins"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Fortune Gems"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Fortune Gems 2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Fortune Gems 3"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Golden Empire"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Jackpot Bingo"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Mines"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Mines Gold"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Money Coming"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Pirate Queen 2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Super Ace"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Super Ace Deluxe"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Super Ace II"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Wild Ace"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "MW",
+      "game_name": "Mahjong Hit"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Anubis Wrath"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Cocktail Nights"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Crypto Gold"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Dragon's Treasure Quest"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Geisha's Revenge"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Gemstones Gold"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Lucky Neko"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Mahjong Ways"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Mahjong Ways 2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Museum Mystery"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Pinata Wins"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Poker Kingdom Win"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Treasures of Aztec"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Wild Ape#3258"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Wild Bandito"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Wild Bounty Showdown"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "7 Clovers of Fortune"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Big Bass Bonanza™"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Candy Blitz Bombs"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Cash Box™"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Fire Hot 40"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Fire Hot 5"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Fortune of Aztec"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Gates of Olympus"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Gates of Olympus 1000"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Gates of Olympus Super Scatter"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Gold Party™"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Lucky's Wild Pub"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Mahjong Wins Super Scatter"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Mummy's Jewels"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Peppe's Pepperoni Pizza Plaza"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Santa's Xmas Rush"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Sleeping Dragon"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Starlight Princess 1000"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Sugar Rush 1000"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Super 7s"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Sweet Bonanza"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Sweet Bonanza 1000"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Sweet Rush Bonanza"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PT",
+      "game_name": "Premium Blackjack Single Hand"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "RLX",
+      "game_name": "Winter Champions"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "100 Blazing Clover"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Chicken Dash"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Clover Coins 3x3"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Clover Coins 4x4"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Crazy777 2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Fortune Coins"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Jackpot Joker"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Jackpot Joker Fever"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Money Coming Expanded Bets"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Money Pot"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Pirate Queen 2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "TA",
+      "game_name": "Wild Ace"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "YB",
+      "game_name": "Dragon Gems"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "YB",
+      "game_name": "Royal Ace"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "1BET",
+      "game_name": "Cockfight"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "3S2",
+      "game_name": "Basketball"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "3S2",
+      "game_name": "Multiple Parlay"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "3S2",
+      "game_name": "Soccer"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "3S2",
+      "game_name": "TENNIS"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "3S2",
+      "game_name": "Volleyball"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Baseball"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Basketball"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Boxing"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "combo"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "CRICKET"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "CS2"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Dota2"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "FIFA"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Football"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Ice Hockey"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "LOL"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "MMA"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "NBA2K"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Rugby Union"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Soccer"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Table Tennis"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "TENNIS"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "V-Soccer"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Valorant"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "BTI",
+      "game_name": "Volleyball"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "DS88",
+      "game_name": "Sabong"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "PIN",
+      "game_name": "Basketball"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "PIN",
+      "game_name": "Boxing"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "PIN",
+      "game_name": "E-Sports"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "PIN",
+      "game_name": "Hockey"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "PIN",
+      "game_name": "Parlay selection"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "PIN",
+      "game_name": "Soccer"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "PIN",
+      "game_name": "TENNIS"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "PIN",
+      "game_name": "Volleyball"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "TF",
+      "game_name": "Arena of Valor"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "TF",
+      "game_name": "CS:GO"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "TF",
+      "game_name": "Dota 2"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "TF",
+      "game_name": "King of Glory"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "TF",
+      "game_name": "League of Legends"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "TF",
+      "game_name": "Parlay"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "TF",
+      "game_name": "Valorant"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "UG2",
+      "game_name": "Basketball"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "UG2",
+      "game_name": "Boxing & MMA"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "UG2",
+      "game_name": "E-Sports"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "UG2",
+      "game_name": "Parlay"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "UG2",
+      "game_name": "Soccer"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "UG2",
+      "game_name": "TENNIS"
+    },
+    {
+      "game_type": "SPT",
+      "vendor": "UG2",
+      "game_name": "Volleyball"
+    }
+  ],
+  "duplicates_removed": [
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Ocean King Jackpot",
+      "kept_line": 38,
+      "removed_line": 56,
+      "removed_game_name_raw": "Ocean King Jackpot_海王彩金"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "JL",
+      "game_name": "Fortune King Jackpot",
+      "kept_line": 39,
+      "removed_line": 57,
+      "removed_game_name_raw": "Fortune King Jackpot_財神彩金"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Speed Baccarat A",
+      "kept_line": 10,
+      "removed_line": 107,
+      "removed_game_name_raw": "Speed Baccarat A_Speed Baccarat A"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Super Speed Baccarat",
+      "kept_line": 31,
+      "removed_line": 108,
+      "removed_game_name_raw": "Super Speed Baccarat_超级极速百家乐"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "Crazy Time",
+      "kept_line": 36,
+      "removed_line": 109,
+      "removed_game_name_raw": "Crazy Time_Crazy Time"
+    },
+    {
+      "game_type": "LIVE",
+      "vendor": "EG",
+      "game_name": "No Commission Baccarat",
+      "kept_line": 42,
+      "removed_line": 110,
+      "removed_game_name_raw": "No Commission Baccarat_No Commission Baccarat"
+    },
+    {
+      "game_type": "PVP",
+      "vendor": "JL",
+      "game_name": "Tongits Go",
+      "kept_line": 23,
+      "removed_line": 158,
+      "removed_game_name_raw": "Tongits Go_Tongits Go"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Super Ace",
+      "kept_line": 2,
+      "removed_line": 209,
+      "removed_game_name_raw": "Super Ace_超级王牌"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Pinata Wins",
+      "kept_line": 3,
+      "removed_line": 210,
+      "removed_game_name_raw": "Pinata Wins_墨西哥狂欢"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Wild Bounty Showdown",
+      "kept_line": 4,
+      "removed_line": 211,
+      "removed_game_name_raw": "Wild Bounty Showdown_赏金大对决"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Super Ace Deluxe",
+      "kept_line": 5,
+      "removed_line": 212,
+      "removed_game_name_raw": "Super Ace Deluxe_超级王牌豪华版"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Golden Empire",
+      "kept_line": 6,
+      "removed_line": 213,
+      "removed_game_name_raw": "Golden Empire_黄金帝国"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Fortune Gems 2",
+      "kept_line": 7,
+      "removed_line": 214,
+      "removed_game_name_raw": "Fortune Gems 2_迦罗宝石2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Sugar Bang Bang 2",
+      "kept_line": 8,
+      "removed_line": 215,
+      "removed_game_name_raw": "Sugar Bang Bang 2_蜜糖爆击2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Fortune Gems 3",
+      "kept_line": 9,
+      "removed_line": 216,
+      "removed_game_name_raw": "Fortune Gems 3_迦罗宝石3"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Wild Ape#3258",
+      "kept_line": 11,
+      "removed_line": 217,
+      "removed_game_name_raw": "Wild Ape#3258_猿宇宙#3258"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Mines",
+      "kept_line": 12,
+      "removed_line": 218,
+      "removed_game_name_raw": "Mines_Mines"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Money Coming",
+      "kept_line": 13,
+      "removed_line": 219,
+      "removed_game_name_raw": "Money Coming_疯狂钱来也"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Wild Bandito",
+      "kept_line": 14,
+      "removed_line": 220,
+      "removed_game_name_raw": "Wild Bandito_亡灵大盗"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Sweet Bonanza 1000",
+      "kept_line": 15,
+      "removed_line": 221,
+      "removed_game_name_raw": "Sweet Bonanza 1000_甜入心扉 1000"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Sugar Rush 1000",
+      "kept_line": 16,
+      "removed_line": 222,
+      "removed_game_name_raw": "Sugar Rush 1000_极速糖果1000"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Fortune Gems",
+      "kept_line": 17,
+      "removed_line": 223,
+      "removed_game_name_raw": "Fortune Gems_迦罗宝石"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Lucky Neko",
+      "kept_line": 18,
+      "removed_line": 224,
+      "removed_game_name_raw": "Lucky Neko_招财喵"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Poker Win",
+      "kept_line": 19,
+      "removed_line": 225,
+      "removed_game_name_raw": "Poker Win_至尊王牌"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "MW",
+      "game_name": "Mahjong Hit",
+      "kept_line": 20,
+      "removed_line": 226,
+      "removed_game_name_raw": "Mahjong Hit_麻将碰碰"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Treasures of Aztec",
+      "kept_line": 21,
+      "removed_line": 227,
+      "removed_game_name_raw": "Treasures of Aztec_寻宝黄金城"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Color Game",
+      "kept_line": 22,
+      "removed_line": 228,
+      "removed_game_name_raw": "Color Game_Color Game"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Chinese New Year Moreways",
+      "kept_line": 24,
+      "removed_line": 229,
+      "removed_game_name_raw": "Chinese New Year Moreways_大过年路路发"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Boxing King",
+      "kept_line": 25,
+      "removed_line": 230,
+      "removed_game_name_raw": "Boxing King_拳王"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Sugar Bang Bang",
+      "kept_line": 26,
+      "removed_line": 231,
+      "removed_game_name_raw": "Sugar Bang Bang_蜜糖爆击"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JDB",
+      "game_name": "Magic Ace WILD LOCK",
+      "kept_line": 27,
+      "removed_line": 232,
+      "removed_game_name_raw": "Magic Ace WILD LOCK_魔幻王牌 WILD LOCK"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Crazy777",
+      "kept_line": 28,
+      "removed_line": 233,
+      "removed_game_name_raw": "Crazy777_疯狂777"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Mahjong Ways 2",
+      "kept_line": 29,
+      "removed_line": 234,
+      "removed_game_name_raw": "Mahjong Ways 2_麻将胡了2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "JUNGLE BANG BANG",
+      "kept_line": 30,
+      "removed_line": 235,
+      "removed_game_name_raw": "JUNGLE BANG BANG_丛林爆击"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Gates of Olympus Super Scatter",
+      "kept_line": 32,
+      "removed_line": 236,
+      "removed_game_name_raw": "Gates of Olympus Super Scatter_奥林匹斯之门超神力"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Super Ace II",
+      "kept_line": 33,
+      "removed_line": 237,
+      "removed_game_name_raw": "Super Ace II_超级王牌 II"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Wild Ace",
+      "kept_line": 34,
+      "removed_line": 238,
+      "removed_game_name_raw": "Wild Ace_百搭王牌"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Geisha's Revenge",
+      "kept_line": 35,
+      "removed_line": 239,
+      "removed_game_name_raw": "Geisha's Revenge_艺伎之刃"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Poker Kingdom Win",
+      "kept_line": 37,
+      "removed_line": 240,
+      "removed_game_name_raw": "Poker Kingdom Win_扑克王国"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Anubis Wrath",
+      "kept_line": 40,
+      "removed_line": 241,
+      "removed_game_name_raw": "Anubis Wrath_阿努比斯"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Pirate Queen 2",
+      "kept_line": 41,
+      "removed_line": 242,
+      "removed_game_name_raw": "Pirate Queen 2_海盗女王2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Chinese New Year 2",
+      "kept_line": 43,
+      "removed_line": 243,
+      "removed_game_name_raw": "Chinese New Year 2_大过年2"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "YB",
+      "game_name": "Royal Ace",
+      "kept_line": 44,
+      "removed_line": 244,
+      "removed_game_name_raw": "Royal Ace_王牌贵宾"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Cocktail Nights",
+      "kept_line": 45,
+      "removed_line": 245,
+      "removed_game_name_raw": "Cocktail Nights_夜醉佳人"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "YB",
+      "game_name": "Dragon Gems",
+      "kept_line": 46,
+      "removed_line": 246,
+      "removed_game_name_raw": "Dragon Gems_好运龙宝"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Super Elements",
+      "kept_line": 47,
+      "removed_line": 247,
+      "removed_game_name_raw": "Super Elements_元素狂潮"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Gates of Olympus 1000",
+      "kept_line": 48,
+      "removed_line": 248,
+      "removed_game_name_raw": "Gates of Olympus 1000_奥林匹斯之门 1000"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "FC",
+      "game_name": "Lucky Fortunes",
+      "kept_line": 49,
+      "removed_line": 249,
+      "removed_game_name_raw": "Lucky Fortunes_财富连连"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "Circus Joker 4096",
+      "kept_line": 50,
+      "removed_line": 250,
+      "removed_game_name_raw": "Circus Joker 4096_馬戲團小丑 4096"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "JL",
+      "game_name": "3 Super Ace",
+      "kept_line": 51,
+      "removed_line": 251,
+      "removed_game_name_raw": "3 Super Ace_3 超級王牌"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Gates of Olympus 1000",
+      "kept_line": 48,
+      "removed_line": 317,
+      "removed_game_name_raw": "Gates of Olympus 1000_奥林匹斯之门 1000"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Wild Bounty Showdown",
+      "kept_line": 4,
+      "removed_line": 319,
+      "removed_game_name_raw": "Wild Bounty Showdown_赏金大对决"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Gates of Olympus Super Scatter",
+      "kept_line": 32,
+      "removed_line": 321,
+      "removed_game_name_raw": "Gates of Olympus Super Scatter_奥林匹斯之门超神力"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PP",
+      "game_name": "Sweet Bonanza 1000",
+      "kept_line": 15,
+      "removed_line": 322,
+      "removed_game_name_raw": "Sweet Bonanza 1000_甜入心扉 1000"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Lucky Neko",
+      "kept_line": 18,
+      "removed_line": 323,
+      "removed_game_name_raw": "Lucky Neko_招财喵"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Wild Bandito",
+      "kept_line": 14,
+      "removed_line": 334,
+      "removed_game_name_raw": "Wild Bandito_亡灵大盗"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Treasures of Aztec",
+      "kept_line": 21,
+      "removed_line": 344,
+      "removed_game_name_raw": "Treasures of Aztec_寻宝黄金城"
+    },
+    {
+      "game_type": "RNG",
+      "vendor": "PG",
+      "game_name": "Cocktail Nights",
+      "kept_line": 45,
+      "removed_line": 359,
+      "removed_game_name_raw": "Cocktail Nights_夜醉佳人"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Bombing Fishing",
+      "kept_line": 314,
+      "removed_line": 365,
+      "removed_game_name_raw": "Bombing Fishing_炸鱼来了"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Jackpot Fishing",
+      "kept_line": 320,
+      "removed_line": 366,
+      "removed_game_name_raw": "Jackpot Fishing_极速彩金捕鱼"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Boom Legend",
+      "kept_line": 345,
+      "removed_line": 367,
+      "removed_game_name_raw": "Boom Legend_夺宝传奇"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Happy Fishing",
+      "kept_line": 349,
+      "removed_line": 368,
+      "removed_game_name_raw": "Happy Fishing_开心捕鱼"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "TA",
+      "game_name": "Dragon Fortune",
+      "kept_line": 352,
+      "removed_line": 369,
+      "removed_game_name_raw": "Dragon Fortune_飞龙宝藏"
+    },
+    {
+      "game_type": "FISH",
+      "vendor": "FC",
+      "game_name": "Fa Chai Fishing",
+      "kept_line": 74,
+      "removed_line": 375,
+      "removed_game_name_raw": "Fa Chai Fishing_发财捕鱼"
+    }
+  ]
+}

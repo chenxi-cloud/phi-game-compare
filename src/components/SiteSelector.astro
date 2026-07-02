@@ -1,0 +1,205 @@
+---
+import { getBrandOptions } from '@/data/brands-comprehensive';
+
+const brands = getBrandOptions();
+---
+
+<section class="selector" id="brand-selector" data-brands={JSON.stringify(brands)}>
+  <div class="selector-header">
+    <h2 class="section-title">Compare Any Two Platforms</h2>
+    <p class="section-subtitle">
+      Pick two brands from the dropdowns below and view the full head-to-head report.
+    </p>
+  </div>
+
+  <div class="selector-body">
+    <div class="select-group">
+      <label for="brand-a">Platform A</label>
+      <select id="brand-a" class="brand-select">
+        <option value="" selected disabled>Select a platform…</option>
+        {brands.map((b) => (
+          <option value={b.slug}>{b.name}</option>
+        ))}
+      </select>
+    </div>
+
+    <span class="vs">VS</span>
+
+    <div class="select-group">
+      <label for="brand-b">Platform B</label>
+      <select id="brand-b" class="brand-select">
+        <option value="" selected disabled>Select a platform…</option>
+        {brands.map((b) => (
+          <option value={b.slug}>{b.name}</option>
+        ))}
+      </select>
+    </div>
+  </div>
+
+  <div class="selector-actions">
+    <p class="selection-hint" id="selection-hint">Select two different platforms</p>
+    <button class="btn btn-primary" id="view-report-btn" disabled>
+      View Comparison Report →
+    </button>
+  </div>
+</section>
+
+<script>
+  interface BrandOption {
+    name: string;
+    slug: string;
+    index: number;
+  }
+
+  const root = document.getElementById('brand-selector') as HTMLElement;
+  const brands: BrandOption[] = JSON.parse(root.dataset.brands ?? '[]');
+  const bySlug = new Map(brands.map((b) => [b.slug, b]));
+
+  const selectA = document.getElementById('brand-a') as HTMLSelectElement;
+  const selectB = document.getElementById('brand-b') as HTMLSelectElement;
+  const btn = document.getElementById('view-report-btn') as HTMLButtonElement;
+  const hint = document.getElementById('selection-hint') as HTMLParagraphElement;
+
+  function buildSlug(a: BrandOption, b: BrandOption): string {
+    // Routes are generated in source-array order (lower index first).
+    const [first, second] = a.index < b.index ? [a, b] : [b, a];
+    return `${first.slug}-vs-${second.slug}`;
+  }
+
+  function currentPair(): { a: BrandOption; b: BrandOption } | null {
+    const a = bySlug.get(selectA.value);
+    const b = bySlug.get(selectB.value);
+    if (!a || !b) return null;
+    if (a.slug === b.slug) return null;
+    return { a, b };
+  }
+
+  function updateUI() {
+    const a = bySlug.get(selectA.value);
+    const b = bySlug.get(selectB.value);
+
+    if (!a || !b) {
+      btn.disabled = true;
+      hint.textContent = 'Select two different platforms';
+      hint.classList.remove('ready');
+      return;
+    }
+
+    if (a.slug === b.slug) {
+      btn.disabled = true;
+      hint.textContent = 'Please pick two different platforms';
+      hint.classList.remove('ready');
+      return;
+    }
+
+    btn.disabled = false;
+    hint.textContent = `${a.name} vs ${b.name} — report ready`;
+    hint.classList.add('ready');
+  }
+
+  function goToReport() {
+    const pair = currentPair();
+    if (!pair) return;
+    window.location.href = `/reports/${buildSlug(pair.a, pair.b)}/`;
+  }
+
+  selectA.addEventListener('change', updateUI);
+  selectB.addEventListener('change', updateUI);
+  btn.addEventListener('click', goToReport);
+
+  updateUI();
+</script>
+
+<style>
+  .selector-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .selector-body {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+  }
+
+  .select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 220px;
+  }
+
+  .select-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+
+  .brand-select {
+    appearance: none;
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b9cb3' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  .brand-select:hover,
+  .brand-select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+  }
+
+  .vs {
+    font-weight: 800;
+    color: var(--color-text-muted);
+    padding-bottom: 0.75rem;
+  }
+
+  .selector-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .selection-hint {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  .selection-hint.ready {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 560px) {
+    .selector-body {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .vs {
+      text-align: center;
+      padding-bottom: 0;
+    }
+  }
+</style>

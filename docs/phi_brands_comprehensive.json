@@ -1,0 +1,5996 @@
+{
+  "generated_at": "2026-07-01T09:34:42.175424+00:00",
+  "description": "菲律宾游戏品牌综合信息（搜索分层 + 游戏丰富度 + 热门游戏 + 性能数据 + 客服指标）",
+  "source_files": {
+    "brands_tiers": "docs/phi_brands_tiers.json",
+    "games": "docs/games_cleaned.json",
+    "performance_distribution": "docs/performance_metrics_distribution.json"
+  },
+  "tiering_meta": {
+    "source_file": "docs/phi_brands_ahrefs.json",
+    "tiering_method": {
+      "sort_by": "avg_search_volume_last_2_months",
+      "sort_order": "desc",
+      "tier_ratios": {
+        "tier1": "20%",
+        "tier2": "50%",
+        "tier3": "30%"
+      },
+      "description": "Ranked by average search volume over the last two months, split into tiers by brand count ratio"
+    },
+    "total_brands": 60,
+    "tier_counts": {
+      "tier1": 12,
+      "tier2": 30,
+      "tier3": 18,
+      "tier1_pct": 20,
+      "tier2_pct": 50,
+      "tier3_pct": 30
+    }
+  },
+  "game_richness_mapping": {
+    "tier1": "High",
+    "tier2": "Medium",
+    "tier3": "Low"
+  },
+  "total_brands": 60,
+  "brands": [
+    {
+      "rank": 1,
+      "tier": 1,
+      "brand": "PlayTime",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 3279420,
+      "search_volume": 2860000,
+      "top_ranking_url": "https://www.playtime.ph/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "PVP",
+          "vendor": "JL",
+          "game_name": "Pusoy Go"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Jackpot Fishing"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Super 7s"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "SEX",
+          "game_name": "BACCARAT C07"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "JDB",
+          "game_name": "Dragon Tiger-Joker Bonus"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 1.2,
+        "dns_anti_hijacking_percent": 99.1,
+        "ui_fps": 58
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 5,
+        "response_speed_score": 2,
+        "overall_score": 7
+      }
+    },
+    {
+      "rank": 2,
+      "tier": 1,
+      "brand": "BingoPlus",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 2504570,
+      "search_volume": 2260000,
+      "top_ranking_url": "https://bingoplus.com/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Chinese New Year 2"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Thai Fish Prawn Crab"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Fortune Zombie Lightning"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Circus Jackpot"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "AW",
+          "game_name": "Aladdin Adventure"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 1.0,
+        "dns_anti_hijacking_percent": 99.0,
+        "ui_fps": 55
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 5,
+        "response_speed_score": 2,
+        "overall_score": 7
+      }
+    },
+    {
+      "rank": 3,
+      "tier": 1,
+      "brand": "GameZone",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 1464783,
+      "search_volume": 1060000,
+      "top_ranking_url": "https://gzone.ph/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "LOTTERY",
+          "vendor": "GPI",
+          "game_name": "Keno"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Bombing Fishing"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Dragon Master"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Always 9 Baccarat"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Mummy's Jewels"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 1.0,
+        "dns_anti_hijacking_percent": 99.5,
+        "ui_fps": 54
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 4,
+        "response_speed_score": 3,
+        "overall_score": 7
+      }
+    },
+    {
+      "rank": 4,
+      "tier": 1,
+      "brand": "Bet88",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 843514,
+      "search_volume": 743000,
+      "top_ranking_url": "https://bet88.ph/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "100 Blazing Clover"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Anubis Wrath"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Dragon of Demons"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Gemstones Gold"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "JL",
+          "game_name": "TeenPatti 20-20"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 1.2,
+        "dns_anti_hijacking_percent": 99.1,
+        "ui_fps": 56
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 4,
+        "response_speed_score": 2,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 5,
+      "tier": 1,
+      "brand": "OKBet",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 818854,
+      "search_volume": 749000,
+      "top_ranking_url": "https://www.okbet.com/lucky-chest",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Bombing Fishing"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "SAS",
+          "game_name": "Fishermen Gold"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "GFG",
+          "game_name": "Baccarat"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Dragon Master"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Wild Bounty Showdown"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 1.2,
+        "dns_anti_hijacking_percent": 99.0,
+        "ui_fps": 55
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 3,
+        "response_speed_score": 3,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 6,
+      "tier": 1,
+      "brand": "Ph365",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 741314,
+      "search_volume": 723000,
+      "top_ranking_url": "https://www.ph365.org/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Jackpot Joker"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Clover Coins 3x3"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Anubis Wrath"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Crazy777 2"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EZ",
+          "game_name": "EZ Dealer Roulette"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 1.4,
+        "dns_anti_hijacking_percent": 99.6,
+        "ui_fps": 56
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 5,
+        "response_speed_score": 2,
+        "overall_score": 7
+      }
+    },
+    {
+      "rank": 7,
+      "tier": 1,
+      "brand": "Taya365",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 515618,
+      "search_volume": 521000,
+      "top_ranking_url": "https://www.facebook.com/taya365uscom/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "All-star Fishing"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "JUNGLE BANG BANG"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Poker Kingdom Win"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "FC",
+          "game_name": "Bao Chuan Fishing"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Baseball"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 1.5,
+        "dns_anti_hijacking_percent": 99.9,
+        "ui_fps": 59
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 5,
+        "response_speed_score": 2,
+        "overall_score": 7
+      }
+    },
+    {
+      "rank": 8,
+      "tier": 1,
+      "brand": "Taya777",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 462592,
+      "search_volume": 447000,
+      "top_ranking_url": "https://www.taya777.com/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Jackpot Fishing 2"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Cai Shen Fishing"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "PP",
+          "game_name": "One Blackjack 5 -Turkish"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "PIN",
+          "game_name": "Basketball"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Circus Jackpot"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 0.9,
+        "dns_anti_hijacking_percent": 98.6,
+        "ui_fps": 59
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 5,
+        "response_speed_score": 1,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 9,
+      "tier": 1,
+      "brand": "ArenaPlus",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 242551,
+      "search_volume": 246000,
+      "top_ranking_url": "https://arenaplus.ph/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Gates of Olympus Super Scatter"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "AW",
+          "game_name": "Kung Fu Meow"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "7 Up 7 Down"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Coin Toss"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "TF",
+          "game_name": "League of Legends"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 1.0,
+        "dns_anti_hijacking_percent": 99.5,
+        "ui_fps": 59
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 5,
+        "response_speed_score": 2,
+        "overall_score": 7
+      }
+    },
+    {
+      "rank": 10,
+      "tier": 1,
+      "brand": "Milyon88",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 205950,
+      "search_volume": 212000,
+      "top_ranking_url": "https://www.milyon88.live/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "All-star Fishing"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Museum Mystery"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Super 7s"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Fire Hot 5"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Gemstones Gold"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 1.3,
+        "dns_anti_hijacking_percent": 99.1,
+        "ui_fps": 59
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 5,
+        "response_speed_score": 2,
+        "overall_score": 7
+      }
+    },
+    {
+      "rank": 11,
+      "tier": 1,
+      "brand": "JiliBet",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 184161,
+      "search_volume": 181000,
+      "top_ranking_url": "https://www.jili.ma/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "LOTTERY",
+          "vendor": "BGO",
+          "game_name": "Bingo Pilipino Live"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Sweet Rush Bonanza"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Table Tennis"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "BT",
+          "game_name": "Bird'sParadise"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JDB",
+          "game_name": "Magic Ace WILD LOCK"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 0.8,
+        "dns_anti_hijacking_percent": 99.4,
+        "ui_fps": 56
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 4,
+        "response_speed_score": 2,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 12,
+      "tier": 1,
+      "brand": "777pub",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 99013,
+      "search_volume": 82000,
+      "top_ranking_url": "https://777pub.cc/",
+      "game_richness": "High",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "SEX",
+          "game_name": "BACCARAT 5"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Jackpot Joker"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Wild Ape#3258"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "SWG",
+          "game_name": "Cash Cow"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "DRS",
+          "game_name": "Dino Hunter"
+        }
+      ],
+      "performance": {
+        "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+        "fcp_seconds": 1.3,
+        "dns_anti_hijacking_percent": 99.5,
+        "ui_fps": 55
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 5,
+        "response_speed_score": 1,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 13,
+      "tier": 2,
+      "brand": "NUSTAR Online",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 84376,
+      "search_volume": 81000,
+      "top_ranking_url": "https://nustargame.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Boxing King"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "7 Up 7 Down Rush"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Mega Fishing"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "SEX",
+          "game_name": "Baccarat 1"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Sugar Rush 1000"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.0,
+        "dns_anti_hijacking_percent": 92.7,
+        "ui_fps": 41
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 4,
+        "response_speed_score": 1,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 14,
+      "tier": 2,
+      "brand": "Lodi646",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 75633,
+      "search_volume": 67000,
+      "top_ranking_url": "https://www.lodi646sms.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Mahjong Ways"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Cai Shen Fishing"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Dragon Fishing"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Boom Legend"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "CQ9",
+          "game_name": "Paradise 2"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.4,
+        "dns_anti_hijacking_percent": 92.6,
+        "ui_fps": 37
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 3,
+        "response_speed_score": 3,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 15,
+      "tier": 2,
+      "brand": "Swerte99",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 64738,
+      "search_volume": 89000,
+      "top_ranking_url": "https://www.swerte99.uno/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "SPT",
+          "vendor": "PIN",
+          "game_name": "TENNIS"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "UG2",
+          "game_name": "Boxing & MMA"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "PP",
+          "game_name": "Speed Baccarat 1"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Fortune of Aztec"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "AUX",
+          "game_name": "Sweet Gummy"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.9,
+        "dns_anti_hijacking_percent": 89.6,
+        "ui_fps": 46
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 2,
+        "response_speed_score": 3,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 16,
+      "tier": 2,
+      "brand": "Jili777",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 60763,
+      "search_volume": 59000,
+      "top_ranking_url": "https://www.facebook.com/jili777website1/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Sweet Rush Bonanza"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Happy Fishing"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Chinese New Year Moreways"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "PP",
+          "game_name": "Speed Baccarat 1"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "PIN",
+          "game_name": "E-Sports"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.3,
+        "dns_anti_hijacking_percent": 86.7,
+        "ui_fps": 35
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 2,
+        "response_speed_score": 3,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 17,
+      "tier": 2,
+      "brand": "Jiliko",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 56394,
+      "search_volume": 81000,
+      "top_ranking_url": "https://www.jiliko1225.co/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Dinosaur Tycoon II"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EZ",
+          "game_name": "Italian Roulette"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "MMA"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Circus Jackpot"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "WOW",
+          "game_name": "Baccarat"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.3,
+        "dns_anti_hijacking_percent": 82.6,
+        "ui_fps": 36
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 4,
+        "response_speed_score": 1,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 18,
+      "tier": 2,
+      "brand": "WinZir",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 41366,
+      "search_volume": 35000,
+      "top_ranking_url": "https://winzir.ph/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Clover Coins 3x3"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Super Elements"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Wild Bandito"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Big Bass Bonanza™"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Fortune of Aztec"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.3,
+        "dns_anti_hijacking_percent": 85.6,
+        "ui_fps": 38
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 4,
+        "response_speed_score": 1,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 19,
+      "tier": 2,
+      "brand": "Peso63",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 39503,
+      "search_volume": 37000,
+      "top_ranking_url": "https://peso63.org/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Gates of Olympus 1000"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "TF",
+          "game_name": "King of Glory"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "All-star Fishing"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Starlight Princess 1000"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Sugar Bang Bang"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.0,
+        "dns_anti_hijacking_percent": 91.8,
+        "ui_fps": 45
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 4,
+        "response_speed_score": 1,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 20,
+      "tier": 2,
+      "brand": "Hawkplay",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 39488,
+      "search_volume": 44000,
+      "top_ranking_url": "https://wwww.hawkplay.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Speed Baccarat B"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EZ",
+          "game_name": "EZ Dealer Roulette Savanna"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Bombing Fishing"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Mines Gold"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Circus Joker 4096"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.1,
+        "dns_anti_hijacking_percent": 87.2,
+        "ui_fps": 46
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 4,
+        "response_speed_score": 1,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 21,
+      "tier": 2,
+      "brand": "SpinPlus",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 38698,
+      "search_volume": 97000,
+      "top_ranking_url": "https://spinplus.link/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Wild Ace"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "PIN",
+          "game_name": "Soccer"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Dinosaur Tycoon"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Fan Tan Classic"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Royal Fishing"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.0,
+        "dns_anti_hijacking_percent": 89.9,
+        "ui_fps": 38
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 3,
+        "response_speed_score": 3,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 22,
+      "tier": 2,
+      "brand": "Panalobet",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 35719,
+      "search_volume": 32000,
+      "top_ranking_url": "https://panalo91.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Dragon Fortune"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Prosperity Tree Baccarat"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "NBA2K"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "PIN",
+          "game_name": "Boxing"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Bombing Fishing"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.4,
+        "dns_anti_hijacking_percent": 84.2,
+        "ui_fps": 42
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 3,
+        "response_speed_score": 3,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 23,
+      "tier": 2,
+      "brand": "SuperAce88",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 31772,
+      "search_volume": 33000,
+      "top_ranking_url": "https://www.superace88.me/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Fortune Gems 3"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "All-star Fishing"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Chinese New Year Moreways"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Dota2"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Gold Party™"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.3,
+        "dns_anti_hijacking_percent": 82.5,
+        "ui_fps": 47
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 3,
+        "response_speed_score": 3,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 24,
+      "tier": 2,
+      "brand": "WinPH",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 31191,
+      "search_volume": 124000,
+      "top_ranking_url": "https://www.winph7.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Prosperity Tree Baccarat"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "TF",
+          "game_name": "King of Glory"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "SEX",
+          "game_name": "BACCARAT C05"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "SEX",
+          "game_name": "BACCARAT C04"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Wild Ace"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.1,
+        "dns_anti_hijacking_percent": 92.4,
+        "ui_fps": 38
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 4,
+        "response_speed_score": 1,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 25,
+      "tier": 2,
+      "brand": "Lodibet",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 30374,
+      "search_volume": 32000,
+      "top_ranking_url": "https://www.lodibet999.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "EZ",
+          "game_name": "Ruleta del Sol"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "TF",
+          "game_name": "King of Glory"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "7X",
+          "game_name": "Tongits Joker"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "UG2",
+          "game_name": "Parlay"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Money Pot"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.4,
+        "dns_anti_hijacking_percent": 87.6,
+        "ui_fps": 39
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 3,
+        "response_speed_score": 2,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 26,
+      "tier": 2,
+      "brand": "Haha777",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 28134,
+      "search_volume": 22000,
+      "top_ranking_url": "https://hahaha777.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Gold Party™"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Mines"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Five Dragons Fishing"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "TF",
+          "game_name": "League of Legends"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Basketball"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.9,
+        "dns_anti_hijacking_percent": 85.3,
+        "ui_fps": 43
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 5,
+        "response_speed_score": 1,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 27,
+      "tier": 2,
+      "brand": "LuckyCola",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 21118,
+      "search_volume": 23000,
+      "top_ranking_url": "https://www.luckycola.com/egames",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Always 9 Baccarat"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Jackpot Fishing"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "AW",
+          "game_name": "Jackypot Frenzy"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Money Pot"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Dragon Fishing"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.3,
+        "dns_anti_hijacking_percent": 91.7,
+        "ui_fps": 39
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 3,
+        "response_speed_score": 2,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 28,
+      "tier": 2,
+      "brand": "Phil168",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 20613,
+      "search_volume": 19000,
+      "top_ranking_url": "https://www.phil168.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Mahjong Ways 2"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "combo"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Boxing King"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Super Speed Baccarat"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Poker Roulette"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.2,
+        "dns_anti_hijacking_percent": 90.3,
+        "ui_fps": 36
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 3,
+        "response_speed_score": 2,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 29,
+      "tier": 2,
+      "brand": "GoPerya",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 18320,
+      "search_volume": 14000,
+      "top_ranking_url": "https://goperya.com.ph/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Speed Baccarat B"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Sleeping Dragon"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Super Color Game"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "PP",
+          "game_name": "Speed Baccarat 2"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "PIN",
+          "game_name": "Basketball"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.5,
+        "dns_anti_hijacking_percent": 87.2,
+        "ui_fps": 39
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 4,
+        "response_speed_score": 1,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 30,
+      "tier": 2,
+      "brand": "MWPlay",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 16454,
+      "search_volume": 17000,
+      "top_ranking_url": "https://www.mwplay888.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Boom Legend"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "YB",
+          "game_name": "Dragon Gems"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "JL",
+          "game_name": "Blackjack"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "3S2",
+          "game_name": "Soccer"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Mahjong Ways 2"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.3,
+        "dns_anti_hijacking_percent": 90.3,
+        "ui_fps": 47
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 2,
+        "response_speed_score": 3,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 31,
+      "tier": 2,
+      "brand": "PhlWin",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 15184,
+      "search_volume": 33000,
+      "top_ranking_url": "https://www.phlwin.net/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "LOTTERY",
+          "vendor": "BGO",
+          "game_name": "Bingo Pilipino Live"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Korean Golden Wealth Baccarat"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Jackpot Fishing"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Cocktail Nights"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "DRS",
+          "game_name": "Gods Slash Fish"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.0,
+        "dns_anti_hijacking_percent": 84.9,
+        "ui_fps": 39
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 4,
+        "response_speed_score": 2,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 32,
+      "tier": 2,
+      "brand": "Tapwin",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 12764,
+      "search_volume": 17000,
+      "top_ranking_url": "https://www.tapwin2026.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "PVP",
+          "vendor": "KS",
+          "game_name": "Baccarat3"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Ice Hockey"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Colour Game"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Mines Gold"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "TF",
+          "game_name": "Parlay"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.4,
+        "dns_anti_hijacking_percent": 91.0,
+        "ui_fps": 39
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 4,
+        "response_speed_score": 1,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 33,
+      "tier": 2,
+      "brand": "Rich9",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 12614,
+      "search_volume": 11000,
+      "top_ranking_url": "https://rich9.com.ph/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Lightning Storm"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Poker Roulette"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "UG2",
+          "game_name": "E-Sports"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "FC",
+          "game_name": "Monkey King Fishing"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "SEX",
+          "game_name": "BACCARAT C09"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.9,
+        "dns_anti_hijacking_percent": 83.0,
+        "ui_fps": 46
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 2,
+        "response_speed_score": 3,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 34,
+      "tier": 2,
+      "brand": "Pesobet",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 10222,
+      "search_volume": 11000,
+      "top_ranking_url": "https://pesobetofficial.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Dinosaur Tycoon"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "JUNGLE BANG BANG"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Toon Crash"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Fortune of Aztec"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "FC",
+          "game_name": "Fierce Fishing"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.0,
+        "dns_anti_hijacking_percent": 86.0,
+        "ui_fps": 37
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 3,
+        "response_speed_score": 3,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 35,
+      "tier": 2,
+      "brand": "Royal888",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 10138,
+      "search_volume": 11000,
+      "top_ranking_url": "https://www.royal888p.com/slotgame",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "PVP",
+          "vendor": "WOW",
+          "game_name": "Roulette"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "100 Blazing Clover"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "CRICKET"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Super 7s"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Boxing"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.4,
+        "dns_anti_hijacking_percent": 88.2,
+        "ui_fps": 40
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 3,
+        "response_speed_score": 2,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 36,
+      "tier": 2,
+      "brand": "JL16",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 10121,
+      "search_volume": 61000,
+      "top_ranking_url": "https://www.7jl16.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Santa's Xmas Rush"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Pirate Queen 2"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Lucky Fortunes"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Dragon's Treasure Quest"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "JL",
+          "game_name": "Andar Bahar"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.5,
+        "dns_anti_hijacking_percent": 89.8,
+        "ui_fps": 41
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 4,
+        "response_speed_score": 2,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 37,
+      "tier": 2,
+      "brand": "PeraPlay",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 9376,
+      "search_volume": 8000,
+      "top_ranking_url": "https://www.peraplay.ph/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "PP",
+          "game_name": "One Blackjack 5 -Turkish"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Super Elements"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "SEX",
+          "game_name": "BACCARAT C08"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Jackpot Fishing"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "SEX",
+          "game_name": "BACCARAT 5"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.2,
+        "dns_anti_hijacking_percent": 87.2,
+        "ui_fps": 39
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 4,
+        "response_speed_score": 2,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 38,
+      "tier": 2,
+      "brand": "Solaire Online",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 7244,
+      "search_volume": 6500,
+      "top_ranking_url": "https://www.solaireonline.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Money Coming"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "WOW",
+          "game_name": "Baccarat"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "BT",
+          "game_name": "Bird'sParadise"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Poker Roulette"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "AW",
+          "game_name": "Kung Fu Meow"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.8,
+        "dns_anti_hijacking_percent": 87.0,
+        "ui_fps": 44
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 2,
+        "response_speed_score": 3,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 39,
+      "tier": 2,
+      "brand": "Sugal777",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 7156,
+      "search_volume": 11000,
+      "top_ranking_url": "https://www.sugal777cup.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Lucky Fortunes"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Ice Hockey"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Super Color Game"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KP",
+          "game_name": "Black Jack"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Fan Tan Classic"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.4,
+        "dns_anti_hijacking_percent": 83.3,
+        "ui_fps": 35
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 4,
+        "response_speed_score": 1,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 40,
+      "tier": 2,
+      "brand": "Pnxbet",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 6270,
+      "search_volume": 3400,
+      "top_ranking_url": "https://pnxbets.ph/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Dragon Tiger 2"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Fortune Coins"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "PIN",
+          "game_name": "TENNIS"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "AW",
+          "game_name": "SuperStar"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Thai Fish Prawn Crab"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 3.1,
+        "dns_anti_hijacking_percent": 92.6,
+        "ui_fps": 44
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 3,
+        "response_speed_score": 3,
+        "overall_score": 6
+      }
+    },
+    {
+      "rank": 41,
+      "tier": 2,
+      "brand": "InPlay",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 6201,
+      "search_volume": 6400,
+      "top_ranking_url": "https://www.inplay.ph/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "EZ",
+          "game_name": "Italian Roulette"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "WOW",
+          "game_name": "Roulette"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Fortune Gems 2"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Dragon Fishing"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "UG2",
+          "game_name": "Volleyball"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.5,
+        "dns_anti_hijacking_percent": 92.7,
+        "ui_fps": 48
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 3,
+        "response_speed_score": 2,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 42,
+      "tier": 2,
+      "brand": "Nuebe Gaming",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 5948,
+      "search_volume": 8600,
+      "top_ranking_url": "https://www.nuebe9.com/",
+      "game_richness": "Medium",
+      "hot_games": [
+        {
+          "game_type": "SPT",
+          "vendor": "3S2",
+          "game_name": "TENNIS"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Fortune Coins"
+        },
+        {
+          "game_type": "LOTTERY",
+          "vendor": "BGO",
+          "game_name": "Bingo Pilipino Live"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "UG2",
+          "game_name": "Boxing & MMA"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "JDB",
+          "game_name": "Pusoy Rush"
+        }
+      ],
+      "performance": {
+        "profile": "Standard platforms with mature agent networks and conventional architecture",
+        "fcp_seconds": 2.0,
+        "dns_anti_hijacking_percent": 83.4,
+        "ui_fps": 47
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 3,
+        "response_speed_score": 2,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 43,
+      "tier": 3,
+      "brand": "Wagi777",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 5272,
+      "search_volume": 6100,
+      "top_ranking_url": "https://www.wagi777.net/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "SEX",
+          "game_name": "BACCARAT 5"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "FIFA"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Tongits"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "DS88",
+          "game_name": "Sabong"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Jackpot Bingo"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 8.5,
+        "dns_anti_hijacking_percent": 61.7,
+        "ui_fps": 20
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 3,
+        "response_speed_score": 1,
+        "overall_score": 4
+      }
+    },
+    {
+      "rank": 44,
+      "tier": 3,
+      "brand": "Nasa11",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 5164,
+      "search_volume": 6600,
+      "top_ranking_url": "https://nasa11.net/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "AW",
+          "game_name": "Lucky Buddha"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "PRE",
+          "game_name": "Baccarat"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "TF",
+          "game_name": "King of Glory"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "UG2",
+          "game_name": "TENNIS"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Big Bass Bonanza™"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 6.4,
+        "dns_anti_hijacking_percent": 62.4,
+        "ui_fps": 22
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 1,
+        "response_speed_score": 1,
+        "overall_score": 2
+      }
+    },
+    {
+      "rank": 45,
+      "tier": 3,
+      "brand": "Kkjili",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 3540,
+      "search_volume": 5000,
+      "top_ranking_url": "https://www.kkkjili16.com/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Happy Fishing Lightning"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "JL",
+          "game_name": "Pusoy Go"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Mega Fishing"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Ocean King Jackpot"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "3S2",
+          "game_name": "Volleyball"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 8.2,
+        "dns_anti_hijacking_percent": 71.0,
+        "ui_fps": 23
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 3,
+        "response_speed_score": 1,
+        "overall_score": 4
+      }
+    },
+    {
+      "rank": 46,
+      "tier": 3,
+      "brand": "Bonus365",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 2138,
+      "search_volume": 1900,
+      "top_ranking_url": "https://bonus365m.com/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Fortune Gems 2"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "European Roulette"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Mummy's Jewels"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Pinata Wins"
+        },
+        {
+          "game_type": "LOTTERY",
+          "vendor": "GPI",
+          "game_name": "Keno"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 4.7,
+        "dns_anti_hijacking_percent": 68.6,
+        "ui_fps": 21
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 3,
+        "response_speed_score": 1,
+        "overall_score": 4
+      }
+    },
+    {
+      "rank": 47,
+      "tier": 3,
+      "brand": "555taya",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 1990,
+      "search_volume": 7700,
+      "top_ranking_url": "https://www.555taya.com/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Dragon Fortune"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Sweet Rush Bonanza"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "3S2",
+          "game_name": "Multiple Parlay"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Rugby Union"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Sugar Bang Bang 2"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 8.0,
+        "dns_anti_hijacking_percent": 45.8,
+        "ui_fps": 24
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 2,
+        "response_speed_score": 3,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 48,
+      "tier": 3,
+      "brand": "FC188",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 1968,
+      "search_volume": 3700,
+      "top_ranking_url": "https://www.fc188.org/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "DG",
+          "game_name": "blockchain baccarat"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "RLX",
+          "game_name": "Winter Champions"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Jackpot Joker Fever"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Dice Duet"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Poker Win"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 8.5,
+        "dns_anti_hijacking_percent": 69.5,
+        "ui_fps": 25
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 1,
+        "response_speed_score": 2,
+        "overall_score": 3
+      }
+    },
+    {
+      "rank": 49,
+      "tier": 3,
+      "brand": "Peso88",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 1762,
+      "search_volume": 2800,
+      "top_ranking_url": "https://www.peso888.app/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "CS2"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Dragon Fishing"
+        },
+        {
+          "game_type": "LOTTERY",
+          "vendor": "BGO",
+          "game_name": "Bingo Pilipino Live"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Lucky Fortunes"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "BSP",
+          "game_name": "RUMMY"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 5.5,
+        "dns_anti_hijacking_percent": 62.9,
+        "ui_fps": 18
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 3,
+        "response_speed_score": 1,
+        "overall_score": 4
+      }
+    },
+    {
+      "rank": 50,
+      "tier": 3,
+      "brand": "1xBet PH",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 748,
+      "search_volume": 6000,
+      "top_ranking_url": "https://ph1xbet.ph/en",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "SPT",
+          "vendor": "UG2",
+          "game_name": "Parlay"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Circus Joker 4096"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Royal Shooter"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Mines"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "TA",
+          "game_name": "Ocean King Jackpot"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 6.7,
+        "dns_anti_hijacking_percent": 46.4,
+        "ui_fps": 16
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 2,
+        "response_speed_score": 3,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 51,
+      "tier": 3,
+      "brand": "Diwata Play",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 638,
+      "search_volume": 1900,
+      "top_ranking_url": "https://www.dwplay04.com/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "PVP",
+          "vendor": "GFG",
+          "game_name": "Baccarat"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Sugar Rush 1000"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Super Ace II"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "MT",
+          "game_name": "Baccarat AHT02"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "TA",
+          "game_name": "Money Pot"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 7.6,
+        "dns_anti_hijacking_percent": 53.4,
+        "ui_fps": 26
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 2,
+        "response_speed_score": 2,
+        "overall_score": 4
+      }
+    },
+    {
+      "rank": 52,
+      "tier": 3,
+      "brand": "Tayabet",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 452,
+      "search_volume": 800,
+      "top_ranking_url": "https://tayabet.vip/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Volleyball"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Golden Empire"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "PP",
+          "game_name": "Speed Baccarat 2"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "JL",
+          "game_name": "Tongits Go"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "JUNGLE BANG BANG"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 5.3,
+        "dns_anti_hijacking_percent": 50.7,
+        "ui_fps": 18
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 2,
+        "response_speed_score": 3,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 53,
+      "tier": 3,
+      "brand": "MCW Philippines",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 294,
+      "search_volume": 500,
+      "top_ranking_url": "https://mcwphilippines.org/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Mines Gold"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "Poker Win"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Super Speed Baccarat"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "AW",
+          "game_name": "Lucky Buddha"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Sleeping Dragon"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 7.2,
+        "dns_anti_hijacking_percent": 60.1,
+        "ui_fps": 23
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 2,
+        "response_speed_score": 1,
+        "overall_score": 3
+      }
+    },
+    {
+      "rank": 54,
+      "tier": 3,
+      "brand": "BK8 PH",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 274,
+      "search_volume": 450,
+      "top_ranking_url": "https://www.bk8rp.com/en-ph/home",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "PVP",
+          "vendor": "JDB",
+          "game_name": "Pusoy Rush"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Mahjong Wins Super Scatter"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Funky Time"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "FC",
+          "game_name": "Fierce Fishing"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "FC",
+          "game_name": "JUNGLE BANG BANG"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 7.2,
+        "dns_anti_hijacking_percent": 60.8,
+        "ui_fps": 27
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 3,
+        "response_speed_score": 2,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 55,
+      "tier": 3,
+      "brand": "Okada Online",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 33,
+      "search_volume": 100,
+      "top_ranking_url": "https://okadamanila.com/casino/highlights/okada-online-casino/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "LIVE",
+          "vendor": "EZ",
+          "game_name": "EZ Dealer Roulette Savanna"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "AW",
+          "game_name": "Circus"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "PP",
+          "game_name": "One Blackjack 5 -Turkish"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "SWG",
+          "game_name": "Cash Cow"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Dragon Master"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 5.3,
+        "dns_anti_hijacking_percent": 68.4,
+        "ui_fps": 18
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 1,
+        "response_speed_score": 1,
+        "overall_score": 2
+      }
+    },
+    {
+      "rank": 56,
+      "tier": 3,
+      "brand": "Cgebet",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 2,
+      "search_volume": 150,
+      "top_ranking_url": "https://www.cgebet2.com/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Dragon Fortune"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Dinosaur Tycoon II"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "JL",
+          "game_name": "Tongits Go"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "FIFA"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "JL",
+          "game_name": "Fortune Gems 3"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 7.8,
+        "dns_anti_hijacking_percent": 54.3,
+        "ui_fps": 18
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 3,
+        "response_speed_score": 2,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 57,
+      "tier": 3,
+      "brand": "JiliCity",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 2,
+      "search_volume": 10,
+      "top_ranking_url": "https://jilicity88.com/",
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Football"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "AW",
+          "game_name": "Kung Fu Meow"
+        },
+        {
+          "game_type": "SPT",
+          "vendor": "BTI",
+          "game_name": "Table Tennis"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "DRS",
+          "game_name": "Gods Slash Fish"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EZ",
+          "game_name": "EZ Dealer Roulette"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 4.7,
+        "dns_anti_hijacking_percent": 61.7,
+        "ui_fps": 21
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 3,
+        "response_speed_score": 1,
+        "overall_score": 4
+      }
+    },
+    {
+      "rank": 58,
+      "tier": 3,
+      "brand": "Casino Plus",
+      "status": "error",
+      "avg_search_volume_last_2_months": 0,
+      "search_volume": null,
+      "top_ranking_url": null,
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "AW",
+          "game_name": "Circus"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Always 9 Baccarat"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Super Speed Baccarat"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Korean Golden Wealth Baccarat"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "SWG",
+          "game_name": "Baccarat"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 8.3,
+        "dns_anti_hijacking_percent": 57.1,
+        "ui_fps": 21
+      },
+      "customer_service": {
+        "response_speed": "Medium",
+        "satisfaction_score": 3,
+        "response_speed_score": 2,
+        "overall_score": 5
+      }
+    },
+    {
+      "rank": 59,
+      "tier": 3,
+      "brand": "ScatterSlots PH",
+      "status": "error",
+      "avg_search_volume_last_2_months": 0,
+      "search_volume": null,
+      "top_ranking_url": null,
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "FISH",
+          "vendor": "JL",
+          "game_name": "Dragon Fortune"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Ice Fishing"
+        },
+        {
+          "game_type": "PVP",
+          "vendor": "KM",
+          "game_name": "Poker Roulette"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Cai Shen Fishing"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PG",
+          "game_name": "Geisha's Revenge"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 6.8,
+        "dns_anti_hijacking_percent": 46.8,
+        "ui_fps": 16
+      },
+      "customer_service": {
+        "response_speed": "Slow",
+        "satisfaction_score": 3,
+        "response_speed_score": 1,
+        "overall_score": 4
+      }
+    },
+    {
+      "rank": 60,
+      "tier": 3,
+      "brand": "PlaySwerte",
+      "status": "ok",
+      "avg_search_volume_last_2_months": 0,
+      "search_volume": 0,
+      "top_ranking_url": null,
+      "game_richness": "Low",
+      "hot_games": [
+        {
+          "game_type": "SPT",
+          "vendor": "UG2",
+          "game_name": "Volleyball"
+        },
+        {
+          "game_type": "FISH",
+          "vendor": "JDB",
+          "game_name": "Dragon Master"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Crazy Time A"
+        },
+        {
+          "game_type": "LIVE",
+          "vendor": "EG",
+          "game_name": "Funky Time"
+        },
+        {
+          "game_type": "RNG",
+          "vendor": "PP",
+          "game_name": "Gates of Olympus 1000"
+        }
+      ],
+      "performance": {
+        "profile": "Budget clone sites on cheap servers with notable memory leaks",
+        "fcp_seconds": 5.1,
+        "dns_anti_hijacking_percent": 51.1,
+        "ui_fps": 17
+      },
+      "customer_service": {
+        "response_speed": "Fast",
+        "satisfaction_score": 1,
+        "response_speed_score": 3,
+        "overall_score": 4
+      }
+    }
+  ],
+  "tiers": {
+    "tier1": [
+      {
+        "rank": 1,
+        "tier": 1,
+        "brand": "PlayTime",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 3279420,
+        "search_volume": 2860000,
+        "top_ranking_url": "https://www.playtime.ph/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "PVP",
+            "vendor": "JL",
+            "game_name": "Pusoy Go"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Jackpot Fishing"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Super 7s"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "SEX",
+            "game_name": "BACCARAT C07"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "JDB",
+            "game_name": "Dragon Tiger-Joker Bonus"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 1.2,
+          "dns_anti_hijacking_percent": 99.1,
+          "ui_fps": 58
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 5,
+          "response_speed_score": 2,
+          "overall_score": 7
+        }
+      },
+      {
+        "rank": 2,
+        "tier": 1,
+        "brand": "BingoPlus",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 2504570,
+        "search_volume": 2260000,
+        "top_ranking_url": "https://bingoplus.com/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Chinese New Year 2"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Thai Fish Prawn Crab"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Fortune Zombie Lightning"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Circus Jackpot"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "AW",
+            "game_name": "Aladdin Adventure"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 1.0,
+          "dns_anti_hijacking_percent": 99.0,
+          "ui_fps": 55
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 5,
+          "response_speed_score": 2,
+          "overall_score": 7
+        }
+      },
+      {
+        "rank": 3,
+        "tier": 1,
+        "brand": "GameZone",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 1464783,
+        "search_volume": 1060000,
+        "top_ranking_url": "https://gzone.ph/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "LOTTERY",
+            "vendor": "GPI",
+            "game_name": "Keno"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Bombing Fishing"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Dragon Master"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Always 9 Baccarat"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Mummy's Jewels"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 1.0,
+          "dns_anti_hijacking_percent": 99.5,
+          "ui_fps": 54
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 4,
+          "response_speed_score": 3,
+          "overall_score": 7
+        }
+      },
+      {
+        "rank": 4,
+        "tier": 1,
+        "brand": "Bet88",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 843514,
+        "search_volume": 743000,
+        "top_ranking_url": "https://bet88.ph/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "100 Blazing Clover"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Anubis Wrath"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Dragon of Demons"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Gemstones Gold"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "JL",
+            "game_name": "TeenPatti 20-20"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 1.2,
+          "dns_anti_hijacking_percent": 99.1,
+          "ui_fps": 56
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 4,
+          "response_speed_score": 2,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 5,
+        "tier": 1,
+        "brand": "OKBet",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 818854,
+        "search_volume": 749000,
+        "top_ranking_url": "https://www.okbet.com/lucky-chest",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Bombing Fishing"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "SAS",
+            "game_name": "Fishermen Gold"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "GFG",
+            "game_name": "Baccarat"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Dragon Master"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Wild Bounty Showdown"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 1.2,
+          "dns_anti_hijacking_percent": 99.0,
+          "ui_fps": 55
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 3,
+          "response_speed_score": 3,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 6,
+        "tier": 1,
+        "brand": "Ph365",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 741314,
+        "search_volume": 723000,
+        "top_ranking_url": "https://www.ph365.org/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Jackpot Joker"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Clover Coins 3x3"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Anubis Wrath"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Crazy777 2"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EZ",
+            "game_name": "EZ Dealer Roulette"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 1.4,
+          "dns_anti_hijacking_percent": 99.6,
+          "ui_fps": 56
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 5,
+          "response_speed_score": 2,
+          "overall_score": 7
+        }
+      },
+      {
+        "rank": 7,
+        "tier": 1,
+        "brand": "Taya365",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 515618,
+        "search_volume": 521000,
+        "top_ranking_url": "https://www.facebook.com/taya365uscom/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "All-star Fishing"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "JUNGLE BANG BANG"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Poker Kingdom Win"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "FC",
+            "game_name": "Bao Chuan Fishing"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Baseball"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 1.5,
+          "dns_anti_hijacking_percent": 99.9,
+          "ui_fps": 59
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 5,
+          "response_speed_score": 2,
+          "overall_score": 7
+        }
+      },
+      {
+        "rank": 8,
+        "tier": 1,
+        "brand": "Taya777",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 462592,
+        "search_volume": 447000,
+        "top_ranking_url": "https://www.taya777.com/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Jackpot Fishing 2"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Cai Shen Fishing"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "PP",
+            "game_name": "One Blackjack 5 -Turkish"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "PIN",
+            "game_name": "Basketball"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Circus Jackpot"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 0.9,
+          "dns_anti_hijacking_percent": 98.6,
+          "ui_fps": 59
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 5,
+          "response_speed_score": 1,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 9,
+        "tier": 1,
+        "brand": "ArenaPlus",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 242551,
+        "search_volume": 246000,
+        "top_ranking_url": "https://arenaplus.ph/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Gates of Olympus Super Scatter"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "AW",
+            "game_name": "Kung Fu Meow"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "7 Up 7 Down"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Coin Toss"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "TF",
+            "game_name": "League of Legends"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 1.0,
+          "dns_anti_hijacking_percent": 99.5,
+          "ui_fps": 59
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 5,
+          "response_speed_score": 2,
+          "overall_score": 7
+        }
+      },
+      {
+        "rank": 10,
+        "tier": 1,
+        "brand": "Milyon88",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 205950,
+        "search_volume": 212000,
+        "top_ranking_url": "https://www.milyon88.live/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "All-star Fishing"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Museum Mystery"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Super 7s"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Fire Hot 5"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Gemstones Gold"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 1.3,
+          "dns_anti_hijacking_percent": 99.1,
+          "ui_fps": 59
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 5,
+          "response_speed_score": 2,
+          "overall_score": 7
+        }
+      },
+      {
+        "rank": 11,
+        "tier": 1,
+        "brand": "JiliBet",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 184161,
+        "search_volume": 181000,
+        "top_ranking_url": "https://www.jili.ma/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "LOTTERY",
+            "vendor": "BGO",
+            "game_name": "Bingo Pilipino Live"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Sweet Rush Bonanza"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Table Tennis"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "BT",
+            "game_name": "Bird'sParadise"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JDB",
+            "game_name": "Magic Ace WILD LOCK"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 0.8,
+          "dns_anti_hijacking_percent": 99.4,
+          "ui_fps": 56
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 4,
+          "response_speed_score": 2,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 12,
+        "tier": 1,
+        "brand": "777pub",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 99013,
+        "search_volume": 82000,
+        "top_ranking_url": "https://777pub.cc/",
+        "game_richness": "High",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "SEX",
+            "game_name": "BACCARAT 5"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Jackpot Joker"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Wild Ape#3258"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "SWG",
+            "game_name": "Cash Cow"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "DRS",
+            "game_name": "Dino Hunter"
+          }
+        ],
+        "performance": {
+          "profile": "Licensed industry leaders with premium CDN and native-level optimization",
+          "fcp_seconds": 1.3,
+          "dns_anti_hijacking_percent": 99.5,
+          "ui_fps": 55
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 5,
+          "response_speed_score": 1,
+          "overall_score": 6
+        }
+      }
+    ],
+    "tier2": [
+      {
+        "rank": 13,
+        "tier": 2,
+        "brand": "NUSTAR Online",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 84376,
+        "search_volume": 81000,
+        "top_ranking_url": "https://nustargame.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Boxing King"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "7 Up 7 Down Rush"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Mega Fishing"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "SEX",
+            "game_name": "Baccarat 1"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Sugar Rush 1000"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.0,
+          "dns_anti_hijacking_percent": 92.7,
+          "ui_fps": 41
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 4,
+          "response_speed_score": 1,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 14,
+        "tier": 2,
+        "brand": "Lodi646",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 75633,
+        "search_volume": 67000,
+        "top_ranking_url": "https://www.lodi646sms.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Mahjong Ways"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Cai Shen Fishing"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Dragon Fishing"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Boom Legend"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "CQ9",
+            "game_name": "Paradise 2"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.4,
+          "dns_anti_hijacking_percent": 92.6,
+          "ui_fps": 37
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 3,
+          "response_speed_score": 3,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 15,
+        "tier": 2,
+        "brand": "Swerte99",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 64738,
+        "search_volume": 89000,
+        "top_ranking_url": "https://www.swerte99.uno/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "SPT",
+            "vendor": "PIN",
+            "game_name": "TENNIS"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "UG2",
+            "game_name": "Boxing & MMA"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "PP",
+            "game_name": "Speed Baccarat 1"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Fortune of Aztec"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "AUX",
+            "game_name": "Sweet Gummy"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.9,
+          "dns_anti_hijacking_percent": 89.6,
+          "ui_fps": 46
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 2,
+          "response_speed_score": 3,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 16,
+        "tier": 2,
+        "brand": "Jili777",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 60763,
+        "search_volume": 59000,
+        "top_ranking_url": "https://www.facebook.com/jili777website1/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Sweet Rush Bonanza"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Happy Fishing"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Chinese New Year Moreways"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "PP",
+            "game_name": "Speed Baccarat 1"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "PIN",
+            "game_name": "E-Sports"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.3,
+          "dns_anti_hijacking_percent": 86.7,
+          "ui_fps": 35
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 2,
+          "response_speed_score": 3,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 17,
+        "tier": 2,
+        "brand": "Jiliko",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 56394,
+        "search_volume": 81000,
+        "top_ranking_url": "https://www.jiliko1225.co/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Dinosaur Tycoon II"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EZ",
+            "game_name": "Italian Roulette"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "MMA"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Circus Jackpot"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "WOW",
+            "game_name": "Baccarat"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.3,
+          "dns_anti_hijacking_percent": 82.6,
+          "ui_fps": 36
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 4,
+          "response_speed_score": 1,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 18,
+        "tier": 2,
+        "brand": "WinZir",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 41366,
+        "search_volume": 35000,
+        "top_ranking_url": "https://winzir.ph/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Clover Coins 3x3"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Super Elements"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Wild Bandito"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Big Bass Bonanza™"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Fortune of Aztec"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.3,
+          "dns_anti_hijacking_percent": 85.6,
+          "ui_fps": 38
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 4,
+          "response_speed_score": 1,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 19,
+        "tier": 2,
+        "brand": "Peso63",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 39503,
+        "search_volume": 37000,
+        "top_ranking_url": "https://peso63.org/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Gates of Olympus 1000"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "TF",
+            "game_name": "King of Glory"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "All-star Fishing"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Starlight Princess 1000"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Sugar Bang Bang"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.0,
+          "dns_anti_hijacking_percent": 91.8,
+          "ui_fps": 45
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 4,
+          "response_speed_score": 1,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 20,
+        "tier": 2,
+        "brand": "Hawkplay",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 39488,
+        "search_volume": 44000,
+        "top_ranking_url": "https://wwww.hawkplay.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Speed Baccarat B"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EZ",
+            "game_name": "EZ Dealer Roulette Savanna"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Bombing Fishing"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Mines Gold"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Circus Joker 4096"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.1,
+          "dns_anti_hijacking_percent": 87.2,
+          "ui_fps": 46
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 4,
+          "response_speed_score": 1,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 21,
+        "tier": 2,
+        "brand": "SpinPlus",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 38698,
+        "search_volume": 97000,
+        "top_ranking_url": "https://spinplus.link/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Wild Ace"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "PIN",
+            "game_name": "Soccer"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Dinosaur Tycoon"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Fan Tan Classic"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Royal Fishing"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.0,
+          "dns_anti_hijacking_percent": 89.9,
+          "ui_fps": 38
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 3,
+          "response_speed_score": 3,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 22,
+        "tier": 2,
+        "brand": "Panalobet",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 35719,
+        "search_volume": 32000,
+        "top_ranking_url": "https://panalo91.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Dragon Fortune"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Prosperity Tree Baccarat"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "NBA2K"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "PIN",
+            "game_name": "Boxing"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Bombing Fishing"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.4,
+          "dns_anti_hijacking_percent": 84.2,
+          "ui_fps": 42
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 3,
+          "response_speed_score": 3,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 23,
+        "tier": 2,
+        "brand": "SuperAce88",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 31772,
+        "search_volume": 33000,
+        "top_ranking_url": "https://www.superace88.me/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Fortune Gems 3"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "All-star Fishing"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Chinese New Year Moreways"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Dota2"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Gold Party™"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.3,
+          "dns_anti_hijacking_percent": 82.5,
+          "ui_fps": 47
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 3,
+          "response_speed_score": 3,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 24,
+        "tier": 2,
+        "brand": "WinPH",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 31191,
+        "search_volume": 124000,
+        "top_ranking_url": "https://www.winph7.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Prosperity Tree Baccarat"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "TF",
+            "game_name": "King of Glory"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "SEX",
+            "game_name": "BACCARAT C05"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "SEX",
+            "game_name": "BACCARAT C04"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Wild Ace"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.1,
+          "dns_anti_hijacking_percent": 92.4,
+          "ui_fps": 38
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 4,
+          "response_speed_score": 1,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 25,
+        "tier": 2,
+        "brand": "Lodibet",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 30374,
+        "search_volume": 32000,
+        "top_ranking_url": "https://www.lodibet999.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "EZ",
+            "game_name": "Ruleta del Sol"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "TF",
+            "game_name": "King of Glory"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "7X",
+            "game_name": "Tongits Joker"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "UG2",
+            "game_name": "Parlay"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Money Pot"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.4,
+          "dns_anti_hijacking_percent": 87.6,
+          "ui_fps": 39
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 3,
+          "response_speed_score": 2,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 26,
+        "tier": 2,
+        "brand": "Haha777",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 28134,
+        "search_volume": 22000,
+        "top_ranking_url": "https://hahaha777.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Gold Party™"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Mines"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Five Dragons Fishing"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "TF",
+            "game_name": "League of Legends"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Basketball"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.9,
+          "dns_anti_hijacking_percent": 85.3,
+          "ui_fps": 43
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 5,
+          "response_speed_score": 1,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 27,
+        "tier": 2,
+        "brand": "LuckyCola",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 21118,
+        "search_volume": 23000,
+        "top_ranking_url": "https://www.luckycola.com/egames",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Always 9 Baccarat"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Jackpot Fishing"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "AW",
+            "game_name": "Jackypot Frenzy"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Money Pot"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Dragon Fishing"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.3,
+          "dns_anti_hijacking_percent": 91.7,
+          "ui_fps": 39
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 3,
+          "response_speed_score": 2,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 28,
+        "tier": 2,
+        "brand": "Phil168",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 20613,
+        "search_volume": 19000,
+        "top_ranking_url": "https://www.phil168.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Mahjong Ways 2"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "combo"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Boxing King"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Super Speed Baccarat"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Poker Roulette"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.2,
+          "dns_anti_hijacking_percent": 90.3,
+          "ui_fps": 36
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 3,
+          "response_speed_score": 2,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 29,
+        "tier": 2,
+        "brand": "GoPerya",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 18320,
+        "search_volume": 14000,
+        "top_ranking_url": "https://goperya.com.ph/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Speed Baccarat B"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Sleeping Dragon"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Super Color Game"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "PP",
+            "game_name": "Speed Baccarat 2"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "PIN",
+            "game_name": "Basketball"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.5,
+          "dns_anti_hijacking_percent": 87.2,
+          "ui_fps": 39
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 4,
+          "response_speed_score": 1,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 30,
+        "tier": 2,
+        "brand": "MWPlay",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 16454,
+        "search_volume": 17000,
+        "top_ranking_url": "https://www.mwplay888.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Boom Legend"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "YB",
+            "game_name": "Dragon Gems"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "JL",
+            "game_name": "Blackjack"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "3S2",
+            "game_name": "Soccer"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Mahjong Ways 2"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.3,
+          "dns_anti_hijacking_percent": 90.3,
+          "ui_fps": 47
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 2,
+          "response_speed_score": 3,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 31,
+        "tier": 2,
+        "brand": "PhlWin",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 15184,
+        "search_volume": 33000,
+        "top_ranking_url": "https://www.phlwin.net/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "LOTTERY",
+            "vendor": "BGO",
+            "game_name": "Bingo Pilipino Live"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Korean Golden Wealth Baccarat"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Jackpot Fishing"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Cocktail Nights"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "DRS",
+            "game_name": "Gods Slash Fish"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.0,
+          "dns_anti_hijacking_percent": 84.9,
+          "ui_fps": 39
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 4,
+          "response_speed_score": 2,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 32,
+        "tier": 2,
+        "brand": "Tapwin",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 12764,
+        "search_volume": 17000,
+        "top_ranking_url": "https://www.tapwin2026.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "PVP",
+            "vendor": "KS",
+            "game_name": "Baccarat3"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Ice Hockey"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Colour Game"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Mines Gold"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "TF",
+            "game_name": "Parlay"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.4,
+          "dns_anti_hijacking_percent": 91.0,
+          "ui_fps": 39
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 4,
+          "response_speed_score": 1,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 33,
+        "tier": 2,
+        "brand": "Rich9",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 12614,
+        "search_volume": 11000,
+        "top_ranking_url": "https://rich9.com.ph/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Lightning Storm"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Poker Roulette"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "UG2",
+            "game_name": "E-Sports"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "FC",
+            "game_name": "Monkey King Fishing"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "SEX",
+            "game_name": "BACCARAT C09"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.9,
+          "dns_anti_hijacking_percent": 83.0,
+          "ui_fps": 46
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 2,
+          "response_speed_score": 3,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 34,
+        "tier": 2,
+        "brand": "Pesobet",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 10222,
+        "search_volume": 11000,
+        "top_ranking_url": "https://pesobetofficial.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Dinosaur Tycoon"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "JUNGLE BANG BANG"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Toon Crash"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Fortune of Aztec"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "FC",
+            "game_name": "Fierce Fishing"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.0,
+          "dns_anti_hijacking_percent": 86.0,
+          "ui_fps": 37
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 3,
+          "response_speed_score": 3,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 35,
+        "tier": 2,
+        "brand": "Royal888",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 10138,
+        "search_volume": 11000,
+        "top_ranking_url": "https://www.royal888p.com/slotgame",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "PVP",
+            "vendor": "WOW",
+            "game_name": "Roulette"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "100 Blazing Clover"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "CRICKET"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Super 7s"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Boxing"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.4,
+          "dns_anti_hijacking_percent": 88.2,
+          "ui_fps": 40
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 3,
+          "response_speed_score": 2,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 36,
+        "tier": 2,
+        "brand": "JL16",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 10121,
+        "search_volume": 61000,
+        "top_ranking_url": "https://www.7jl16.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Santa's Xmas Rush"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Pirate Queen 2"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Lucky Fortunes"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Dragon's Treasure Quest"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "JL",
+            "game_name": "Andar Bahar"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.5,
+          "dns_anti_hijacking_percent": 89.8,
+          "ui_fps": 41
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 4,
+          "response_speed_score": 2,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 37,
+        "tier": 2,
+        "brand": "PeraPlay",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 9376,
+        "search_volume": 8000,
+        "top_ranking_url": "https://www.peraplay.ph/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "PP",
+            "game_name": "One Blackjack 5 -Turkish"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Super Elements"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "SEX",
+            "game_name": "BACCARAT C08"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Jackpot Fishing"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "SEX",
+            "game_name": "BACCARAT 5"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.2,
+          "dns_anti_hijacking_percent": 87.2,
+          "ui_fps": 39
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 4,
+          "response_speed_score": 2,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 38,
+        "tier": 2,
+        "brand": "Solaire Online",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 7244,
+        "search_volume": 6500,
+        "top_ranking_url": "https://www.solaireonline.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Money Coming"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "WOW",
+            "game_name": "Baccarat"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "BT",
+            "game_name": "Bird'sParadise"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Poker Roulette"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "AW",
+            "game_name": "Kung Fu Meow"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.8,
+          "dns_anti_hijacking_percent": 87.0,
+          "ui_fps": 44
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 2,
+          "response_speed_score": 3,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 39,
+        "tier": 2,
+        "brand": "Sugal777",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 7156,
+        "search_volume": 11000,
+        "top_ranking_url": "https://www.sugal777cup.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Lucky Fortunes"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Ice Hockey"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Super Color Game"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KP",
+            "game_name": "Black Jack"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Fan Tan Classic"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.4,
+          "dns_anti_hijacking_percent": 83.3,
+          "ui_fps": 35
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 4,
+          "response_speed_score": 1,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 40,
+        "tier": 2,
+        "brand": "Pnxbet",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 6270,
+        "search_volume": 3400,
+        "top_ranking_url": "https://pnxbets.ph/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Dragon Tiger 2"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Fortune Coins"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "PIN",
+            "game_name": "TENNIS"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "AW",
+            "game_name": "SuperStar"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Thai Fish Prawn Crab"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 3.1,
+          "dns_anti_hijacking_percent": 92.6,
+          "ui_fps": 44
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 3,
+          "response_speed_score": 3,
+          "overall_score": 6
+        }
+      },
+      {
+        "rank": 41,
+        "tier": 2,
+        "brand": "InPlay",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 6201,
+        "search_volume": 6400,
+        "top_ranking_url": "https://www.inplay.ph/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "EZ",
+            "game_name": "Italian Roulette"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "WOW",
+            "game_name": "Roulette"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Fortune Gems 2"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Dragon Fishing"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "UG2",
+            "game_name": "Volleyball"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.5,
+          "dns_anti_hijacking_percent": 92.7,
+          "ui_fps": 48
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 3,
+          "response_speed_score": 2,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 42,
+        "tier": 2,
+        "brand": "Nuebe Gaming",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 5948,
+        "search_volume": 8600,
+        "top_ranking_url": "https://www.nuebe9.com/",
+        "game_richness": "Medium",
+        "hot_games": [
+          {
+            "game_type": "SPT",
+            "vendor": "3S2",
+            "game_name": "TENNIS"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Fortune Coins"
+          },
+          {
+            "game_type": "LOTTERY",
+            "vendor": "BGO",
+            "game_name": "Bingo Pilipino Live"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "UG2",
+            "game_name": "Boxing & MMA"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "JDB",
+            "game_name": "Pusoy Rush"
+          }
+        ],
+        "performance": {
+          "profile": "Standard platforms with mature agent networks and conventional architecture",
+          "fcp_seconds": 2.0,
+          "dns_anti_hijacking_percent": 83.4,
+          "ui_fps": 47
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 3,
+          "response_speed_score": 2,
+          "overall_score": 5
+        }
+      }
+    ],
+    "tier3": [
+      {
+        "rank": 43,
+        "tier": 3,
+        "brand": "Wagi777",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 5272,
+        "search_volume": 6100,
+        "top_ranking_url": "https://www.wagi777.net/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "SEX",
+            "game_name": "BACCARAT 5"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "FIFA"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Tongits"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "DS88",
+            "game_name": "Sabong"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Jackpot Bingo"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 8.5,
+          "dns_anti_hijacking_percent": 61.7,
+          "ui_fps": 20
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 3,
+          "response_speed_score": 1,
+          "overall_score": 4
+        }
+      },
+      {
+        "rank": 44,
+        "tier": 3,
+        "brand": "Nasa11",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 5164,
+        "search_volume": 6600,
+        "top_ranking_url": "https://nasa11.net/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "AW",
+            "game_name": "Lucky Buddha"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "PRE",
+            "game_name": "Baccarat"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "TF",
+            "game_name": "King of Glory"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "UG2",
+            "game_name": "TENNIS"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Big Bass Bonanza™"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 6.4,
+          "dns_anti_hijacking_percent": 62.4,
+          "ui_fps": 22
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 1,
+          "response_speed_score": 1,
+          "overall_score": 2
+        }
+      },
+      {
+        "rank": 45,
+        "tier": 3,
+        "brand": "Kkjili",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 3540,
+        "search_volume": 5000,
+        "top_ranking_url": "https://www.kkkjili16.com/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Happy Fishing Lightning"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "JL",
+            "game_name": "Pusoy Go"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Mega Fishing"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Ocean King Jackpot"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "3S2",
+            "game_name": "Volleyball"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 8.2,
+          "dns_anti_hijacking_percent": 71.0,
+          "ui_fps": 23
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 3,
+          "response_speed_score": 1,
+          "overall_score": 4
+        }
+      },
+      {
+        "rank": 46,
+        "tier": 3,
+        "brand": "Bonus365",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 2138,
+        "search_volume": 1900,
+        "top_ranking_url": "https://bonus365m.com/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Fortune Gems 2"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "European Roulette"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Mummy's Jewels"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Pinata Wins"
+          },
+          {
+            "game_type": "LOTTERY",
+            "vendor": "GPI",
+            "game_name": "Keno"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 4.7,
+          "dns_anti_hijacking_percent": 68.6,
+          "ui_fps": 21
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 3,
+          "response_speed_score": 1,
+          "overall_score": 4
+        }
+      },
+      {
+        "rank": 47,
+        "tier": 3,
+        "brand": "555taya",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 1990,
+        "search_volume": 7700,
+        "top_ranking_url": "https://www.555taya.com/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Dragon Fortune"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Sweet Rush Bonanza"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "3S2",
+            "game_name": "Multiple Parlay"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Rugby Union"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Sugar Bang Bang 2"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 8.0,
+          "dns_anti_hijacking_percent": 45.8,
+          "ui_fps": 24
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 2,
+          "response_speed_score": 3,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 48,
+        "tier": 3,
+        "brand": "FC188",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 1968,
+        "search_volume": 3700,
+        "top_ranking_url": "https://www.fc188.org/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "DG",
+            "game_name": "blockchain baccarat"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "RLX",
+            "game_name": "Winter Champions"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Jackpot Joker Fever"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Dice Duet"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Poker Win"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 8.5,
+          "dns_anti_hijacking_percent": 69.5,
+          "ui_fps": 25
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 1,
+          "response_speed_score": 2,
+          "overall_score": 3
+        }
+      },
+      {
+        "rank": 49,
+        "tier": 3,
+        "brand": "Peso88",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 1762,
+        "search_volume": 2800,
+        "top_ranking_url": "https://www.peso888.app/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "CS2"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Dragon Fishing"
+          },
+          {
+            "game_type": "LOTTERY",
+            "vendor": "BGO",
+            "game_name": "Bingo Pilipino Live"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Lucky Fortunes"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "BSP",
+            "game_name": "RUMMY"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 5.5,
+          "dns_anti_hijacking_percent": 62.9,
+          "ui_fps": 18
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 3,
+          "response_speed_score": 1,
+          "overall_score": 4
+        }
+      },
+      {
+        "rank": 50,
+        "tier": 3,
+        "brand": "1xBet PH",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 748,
+        "search_volume": 6000,
+        "top_ranking_url": "https://ph1xbet.ph/en",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "SPT",
+            "vendor": "UG2",
+            "game_name": "Parlay"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Circus Joker 4096"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Royal Shooter"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Mines"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "TA",
+            "game_name": "Ocean King Jackpot"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 6.7,
+          "dns_anti_hijacking_percent": 46.4,
+          "ui_fps": 16
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 2,
+          "response_speed_score": 3,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 51,
+        "tier": 3,
+        "brand": "Diwata Play",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 638,
+        "search_volume": 1900,
+        "top_ranking_url": "https://www.dwplay04.com/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "PVP",
+            "vendor": "GFG",
+            "game_name": "Baccarat"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Sugar Rush 1000"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Super Ace II"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "MT",
+            "game_name": "Baccarat AHT02"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "TA",
+            "game_name": "Money Pot"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 7.6,
+          "dns_anti_hijacking_percent": 53.4,
+          "ui_fps": 26
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 2,
+          "response_speed_score": 2,
+          "overall_score": 4
+        }
+      },
+      {
+        "rank": 52,
+        "tier": 3,
+        "brand": "Tayabet",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 452,
+        "search_volume": 800,
+        "top_ranking_url": "https://tayabet.vip/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Volleyball"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Golden Empire"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "PP",
+            "game_name": "Speed Baccarat 2"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "JL",
+            "game_name": "Tongits Go"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "JUNGLE BANG BANG"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 5.3,
+          "dns_anti_hijacking_percent": 50.7,
+          "ui_fps": 18
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 2,
+          "response_speed_score": 3,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 53,
+        "tier": 3,
+        "brand": "MCW Philippines",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 294,
+        "search_volume": 500,
+        "top_ranking_url": "https://mcwphilippines.org/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Mines Gold"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "Poker Win"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Super Speed Baccarat"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "AW",
+            "game_name": "Lucky Buddha"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Sleeping Dragon"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 7.2,
+          "dns_anti_hijacking_percent": 60.1,
+          "ui_fps": 23
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 2,
+          "response_speed_score": 1,
+          "overall_score": 3
+        }
+      },
+      {
+        "rank": 54,
+        "tier": 3,
+        "brand": "BK8 PH",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 274,
+        "search_volume": 450,
+        "top_ranking_url": "https://www.bk8rp.com/en-ph/home",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "PVP",
+            "vendor": "JDB",
+            "game_name": "Pusoy Rush"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Mahjong Wins Super Scatter"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Funky Time"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "FC",
+            "game_name": "Fierce Fishing"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "FC",
+            "game_name": "JUNGLE BANG BANG"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 7.2,
+          "dns_anti_hijacking_percent": 60.8,
+          "ui_fps": 27
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 3,
+          "response_speed_score": 2,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 55,
+        "tier": 3,
+        "brand": "Okada Online",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 33,
+        "search_volume": 100,
+        "top_ranking_url": "https://okadamanila.com/casino/highlights/okada-online-casino/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "LIVE",
+            "vendor": "EZ",
+            "game_name": "EZ Dealer Roulette Savanna"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "AW",
+            "game_name": "Circus"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "PP",
+            "game_name": "One Blackjack 5 -Turkish"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "SWG",
+            "game_name": "Cash Cow"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Dragon Master"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 5.3,
+          "dns_anti_hijacking_percent": 68.4,
+          "ui_fps": 18
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 1,
+          "response_speed_score": 1,
+          "overall_score": 2
+        }
+      },
+      {
+        "rank": 56,
+        "tier": 3,
+        "brand": "Cgebet",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 2,
+        "search_volume": 150,
+        "top_ranking_url": "https://www.cgebet2.com/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Dragon Fortune"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Dinosaur Tycoon II"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "JL",
+            "game_name": "Tongits Go"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "FIFA"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "JL",
+            "game_name": "Fortune Gems 3"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 7.8,
+          "dns_anti_hijacking_percent": 54.3,
+          "ui_fps": 18
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 3,
+          "response_speed_score": 2,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 57,
+        "tier": 3,
+        "brand": "JiliCity",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 2,
+        "search_volume": 10,
+        "top_ranking_url": "https://jilicity88.com/",
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Football"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "AW",
+            "game_name": "Kung Fu Meow"
+          },
+          {
+            "game_type": "SPT",
+            "vendor": "BTI",
+            "game_name": "Table Tennis"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "DRS",
+            "game_name": "Gods Slash Fish"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EZ",
+            "game_name": "EZ Dealer Roulette"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 4.7,
+          "dns_anti_hijacking_percent": 61.7,
+          "ui_fps": 21
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 3,
+          "response_speed_score": 1,
+          "overall_score": 4
+        }
+      },
+      {
+        "rank": 58,
+        "tier": 3,
+        "brand": "Casino Plus",
+        "status": "error",
+        "avg_search_volume_last_2_months": 0,
+        "search_volume": null,
+        "top_ranking_url": null,
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "AW",
+            "game_name": "Circus"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Always 9 Baccarat"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Super Speed Baccarat"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Korean Golden Wealth Baccarat"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "SWG",
+            "game_name": "Baccarat"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 8.3,
+          "dns_anti_hijacking_percent": 57.1,
+          "ui_fps": 21
+        },
+        "customer_service": {
+          "response_speed": "Medium",
+          "satisfaction_score": 3,
+          "response_speed_score": 2,
+          "overall_score": 5
+        }
+      },
+      {
+        "rank": 59,
+        "tier": 3,
+        "brand": "ScatterSlots PH",
+        "status": "error",
+        "avg_search_volume_last_2_months": 0,
+        "search_volume": null,
+        "top_ranking_url": null,
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "FISH",
+            "vendor": "JL",
+            "game_name": "Dragon Fortune"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Ice Fishing"
+          },
+          {
+            "game_type": "PVP",
+            "vendor": "KM",
+            "game_name": "Poker Roulette"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Cai Shen Fishing"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PG",
+            "game_name": "Geisha's Revenge"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 6.8,
+          "dns_anti_hijacking_percent": 46.8,
+          "ui_fps": 16
+        },
+        "customer_service": {
+          "response_speed": "Slow",
+          "satisfaction_score": 3,
+          "response_speed_score": 1,
+          "overall_score": 4
+        }
+      },
+      {
+        "rank": 60,
+        "tier": 3,
+        "brand": "PlaySwerte",
+        "status": "ok",
+        "avg_search_volume_last_2_months": 0,
+        "search_volume": 0,
+        "top_ranking_url": null,
+        "game_richness": "Low",
+        "hot_games": [
+          {
+            "game_type": "SPT",
+            "vendor": "UG2",
+            "game_name": "Volleyball"
+          },
+          {
+            "game_type": "FISH",
+            "vendor": "JDB",
+            "game_name": "Dragon Master"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Crazy Time A"
+          },
+          {
+            "game_type": "LIVE",
+            "vendor": "EG",
+            "game_name": "Funky Time"
+          },
+          {
+            "game_type": "RNG",
+            "vendor": "PP",
+            "game_name": "Gates of Olympus 1000"
+          }
+        ],
+        "performance": {
+          "profile": "Budget clone sites on cheap servers with notable memory leaks",
+          "fcp_seconds": 5.1,
+          "dns_anti_hijacking_percent": 51.1,
+          "ui_fps": 17
+        },
+        "customer_service": {
+          "response_speed": "Fast",
+          "satisfaction_score": 1,
+          "response_speed_score": 3,
+          "overall_score": 4
+        }
+      }
+    ]
+  },
+  "performance_metrics_distribution": {
+    "tier_1": {
+      "description": "Licensed industry leaders with premium CDN and native-level optimization",
+      "fcp_seconds": {
+        "min": 0.8,
+        "max": 1.5
+      },
+      "dns_anti_hijacking_percent": {
+        "min": 98.5,
+        "max": 99.9
+      },
+      "ui_fps": {
+        "min": 54,
+        "max": 60
+      }
+    },
+    "tier_2": {
+      "description": "Standard platforms with mature agent networks and conventional architecture",
+      "fcp_seconds": {
+        "min": 1.8,
+        "max": 3.5
+      },
+      "dns_anti_hijacking_percent": {
+        "min": 82.0,
+        "max": 94.5
+      },
+      "ui_fps": {
+        "min": 35,
+        "max": 48
+      }
+    },
+    "tier_3": {
+      "description": "Budget clone sites on cheap servers with notable memory leaks",
+      "fcp_seconds": {
+        "min": 4.5,
+        "max": 8.5
+      },
+      "dns_anti_hijacking_percent": {
+        "min": 45.0,
+        "max": 75.0
+      },
+      "ui_fps": {
+        "min": 15,
+        "max": 28
+      }
+    }
+  },
+  "customer_service_scoring": {
+    "description": "Satisfaction score (1-5) + response speed score (Fast=3, Medium=2, Slow=1) = overall score",
+    "speed_scores": {
+      "Fast": 3,
+      "Medium": 2,
+      "Slow": 1
+    },
+    "total_score_by_tier": {
+      "tier1": {
+        "min": 6,
+        "max": 7
+      },
+      "tier2": {
+        "min": 5,
+        "max": 6
+      },
+      "tier3": {
+        "min": 2,
+        "max": 5
+      }
+    }
+  }
+}

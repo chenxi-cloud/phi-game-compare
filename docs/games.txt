@@ -1,0 +1,377 @@
+游戏类型	厂商	游戏名称
+RNG	JL	Super Ace_超级王牌
+RNG	PG	Pinata Wins_墨西哥狂欢
+RNG	PG	Wild Bounty Showdown_赏金大对决
+RNG	JL	Super Ace Deluxe_超级王牌豪华版
+RNG	JL	Golden Empire_黄金帝国
+RNG	JL	Fortune Gems 2_迦罗宝石2
+RNG	FC	Sugar Bang Bang 2_蜜糖爆击2
+RNG	JL	Fortune Gems 3_迦罗宝石3
+LIVE	EG	Speed Baccarat A_Speed Baccarat A
+RNG	PG	Wild Ape#3258_猿宇宙#3258
+RNG	JL	Mines_Mines
+RNG	JL	Money Coming_疯狂钱来也
+RNG	PG	Wild Bandito_亡灵大盗
+RNG	PP	Sweet Bonanza 1000_甜入心扉 1000
+RNG	PP	Sugar Rush 1000_极速糖果1000
+RNG	JL	Fortune Gems_迦罗宝石
+RNG	PG	Lucky Neko_招财喵
+RNG	FC	Poker Win_至尊王牌
+RNG	MW	Mahjong Hit_麻将碰碰
+RNG	PG	Treasures of Aztec_寻宝黄金城
+RNG	JL	Color Game_Color Game
+PVP	JL	Tongits Go_Tongits Go
+RNG	FC	Chinese New Year Moreways_大过年路路发
+RNG	JL	Boxing King_拳王
+RNG	FC	Sugar Bang Bang_蜜糖爆击
+RNG	JDB	Magic Ace WILD LOCK_魔幻王牌 WILD LOCK
+RNG	JL	Crazy777_疯狂777
+RNG	PG	Mahjong Ways 2_麻将胡了2
+RNG	FC	JUNGLE BANG BANG_丛林爆击
+LIVE	EG	Super Speed Baccarat_超级极速百家乐
+RNG	PP	Gates of Olympus Super Scatter_奥林匹斯之门超神力
+RNG	JL	Super Ace II_超级王牌 II
+RNG	JL	Wild Ace_百搭王牌
+RNG	PG	Geisha's Revenge_艺伎之刃
+LIVE	EG	Crazy Time_Crazy Time
+RNG	PG	Poker Kingdom Win_扑克王国
+FISH	JL	Ocean King Jackpot_海王彩金
+FISH	JL	Fortune King Jackpot_財神彩金
+RNG	PG	Anubis Wrath_阿努比斯
+RNG	JL	Pirate Queen 2_海盗女王2
+LIVE	EG	No Commission Baccarat_No Commission Baccarat
+RNG	FC	Chinese New Year 2_大过年2
+RNG	YB	Royal Ace_王牌贵宾
+RNG	PG	Cocktail Nights_夜醉佳人
+RNG	YB	Dragon Gems_好运龙宝
+RNG	FC	Super Elements_元素狂潮
+RNG	PP	Gates of Olympus 1000_奥林匹斯之门 1000
+RNG	FC	Lucky Fortunes_财富连连
+RNG	JL	Circus Joker 4096_馬戲團小丑 4096
+RNG	JL	3 Super Ace_3 超級王牌
+
+GPI	Keno_快乐彩
+BGO	Bingo Pilipino Live_宾果菲律宾直播
+
+JL	Ocean King Jackpot_海王彩金
+JL	Fortune King Jackpot_財神彩金
+JL	Jackpot Fishing_极速彩金捕鱼
+JL	Mega Fishing_王者捕鱼
+JL	Happy Fishing_开心捕鱼
+FC	Star Hunter_星际捕鱼
+JDB	Cai Shen Fishing_财神捕鱼
+JL	FORTUNE ZOMBIE_FORTUNE ZOMBIE
+JL	Jackpot Fishing 2_极速彩金捕鱼2
+JL	Dinosaur Tycoon_猎龙大亨
+JL	All-star Fishing_全明星捕魚
+JDB	Five Dragons Fishing_五龙捕鱼
+JL	Dinosaur Tycoon II_猎龙大亨2
+JL	Circus Jackpot_Circus Jackpot
+AW	Money Tree_摇钱树
+CQ9	Oneshot Fishing_一炮捕鱼
+FC	Monkey King Fishing_大圣捕鱼
+JL	Boom Legend_夺宝传奇
+FC	Fa Chai Fishing_发财捕鱼
+FC	Gods Grant Fortune_众神发发发
+FC	Fierce Fishing_激斗捕鱼
+JL	Bombing Fishing_炸鱼来了
+JL	Dragon Fortune_飞龙宝藏
+JL	Royal Fishing_钱龙捕鱼
+AW	Lucky Buddha_弥勒佛
+AW	SuperStar_明星派对
+FC	Bao Chuan Fishing_宝船捕鱼
+FTG	Ocean Palace Loot_龙宫宝藏
+JDB	Fishing YiLuFa_捕鱼一路发
+AW	Jackypot Frenzy_彩金狂飙
+AW	Mr Fortune_至尊财神
+CQ9	Paradise_皇金渔场
+SAS	Fishermen Gold_鱼乐无穷
+JDB	FISHING LEGEND_海皇争霸 龙凤传说
+JDB	Dragon Fishing_龙王捕鱼
+DRS	Dino Hunter_猎龙霸主
+CQ9	Hero Fishing_英雄捕鱼
+AW	Aladdin Adventure_阿拉丁冒险
+AW	Ice & Fire_冰焰龍戰
+BT	Bird'sParadise_百鸟朝凤
+JDB	Dragon of Demons_邪龙传奇
+AW	Kung Fu Meow_喵鱼大战
+FTG	Space War_星海征战
+SWG	Cash Cow_摇钱树
+CQ9	Paradise 2_皇金渔场2
+CQ9	Onestick Fishing_一棒捕鱼
+AW	Circus_马戏团
+JDB	Dragon Master_猎龙高手
+TP	Twoyeah Jackpot Fishing_二爺彩金捕魚
+DRS	Gods Slash Fish_三仙劈鱼
+
+EG	Speed Baccarat A_Speed Baccarat A
+EG	Super Speed Baccarat_超级极速百家乐
+EG	Crazy Time_Crazy Time
+EG	No Commission Baccarat_No Commission Baccarat
+SEX	BACCARAT C08_百家乐 C08
+EG	Speed Baccarat B_Speed Baccarat B
+SEX	BACCARAT C09_百家乐 C09
+EG	Crazy Time A_Crazy Time A
+PP	Speed Baccarat 1_极速百家乐 1
+EG	Funky Time_欢快时光
+SEX	BACCARAT C10_百家乐 C10
+EZ	EZ Dealer Roulette Savanna_EZ 荷官轮盘萨瓦纳版
+EG	Dragon Tiger_Dragon Tiger
+EG	Speed Baccarat D_Speed Baccarat D
+EG	Lightning Baccarat_Lightning Baccarat
+DG	Baccarat_百家乐
+PP	Vietnamese Speed Baccarat 3_越南语极速百家乐3
+DG	blockchain baccarat_区块链百家乐
+SEX	Baccarat 1_百家乐 1
+EG	Golden Wealth Baccarat_Golden Wealth Baccarat
+EG	Monopoly Big Baller_Monopoly Big Baller
+EZ	Ruleta del Sol_太阳轮盘
+EG	MONOPOLY Live_MONOPOLY Live
+EZ	EZ Dealer Roulette_EZ 荷官轮盘
+SEX	BACCARAT 3_百家乐 3
+EG	Lightning Storm_闪电风暴
+EG	Always 9 Baccarat_永恒 9 百家乐
+SEX	Baccarat 2_百家乐 2
+EG	Lightning Roulette_Lightning Roulette
+EZ	Italian Roulette_意大利语轮盘
+SEX	BACCARAT 4_百家乐 4
+SEX	BACCARAT C07_百家乐 C07
+EG	Korean Golden Wealth Baccarat_韩语黄金财富百家乐
+EG	Mega Ball_Mega Ball
+SEX	BACCARAT C01_百家乐 C01
+EG	Ice Fishing_冰上钓鱼
+MT	Baccarat AHT01_百家乐 AHT01
+SEX	BACCARAT C06_百家乐 C06
+SEX	BACCARAT C05_百家乐 C05
+EG	Super Color Game_超级色彩游戏
+EG	Always 8 Baccarat_恒8百家乐
+EZ	EZ Dealer Roulette Bengali_EZ 荷官轮盘 孟加拉语
+MT	Baccarat AHT02_百家乐 AHT02
+EG	Craps_Craps
+PP	Speed Baccarat 2_极速百家乐 2
+EG	Prosperity Tree Baccarat_繁荣树百家乐
+PRE	Baccarat_百家乐
+SEX	BACCARAT 5_百家乐 5
+PP	Baccarat 1_百家乐 1
+SEX	BACCARAT C04_百家乐 C04
+
+JL	Tongits Go_Tongits Go
+JL	Pusoy Go_普索去
+KM	Baccarat_百家乐
+KM	Colour Game_颜色游戏
+KM	Coin Toss_硬币翻转
+JL	TeenPatti 20-20_TeenPatti 20-20
+SWG	Baccarat_百家乐
+7X	Tongits_经典通吉
+KM	Tongits_Tongits
+JL	Andar Bahar_Andar Bahar
+JDB	Dragon Tiger-Joker Bonus_龙虎斗-鬼牌加赏
+GFG	No Commission Baccarat_免佣百家乐
+KM	Dice Duet_骰子二重奏
+JL	Blackjack Lucky Ladies_Blackjack Lucky Ladies
+GFG	Baccarat_百家乐
+BSP	Black jack(3D)_21点
+GFG	Dragon Tiger Game_龙虎斗
+JL	Ultimate Texas Hold'em_Ultimate Texas Hold'em
+KM	Toon Crash_卡通碰撞
+KS	Baccarat1_百家乐1
+KM	Sic Bo_骰宝
+JL	Blackjack_Blackjack
+KM	Minesweeper_扫雷
+JL	Domino Go_Domino Go
+7X	Tongits Joker_通吉小丑
+JDB	Pusoy Rush_Pusoy Rush
+KS	Baccarat4_百家乐4
+KM	Poker Roulette_扑克轮盘
+KM	Dragon Tiger 2_龙虎 2
+KM	7 Up 7 Down Rush_大小七冲
+KS	Baccarat2_百家乐2
+KM	7 Up 7 Down_大小七
+GFG	Four Cards Up Banker Bull-Bull_新看四张抢庄牛牛
+JL	Ludo Quick_Ludo Quick
+KM	Thai Fish Prawn Crab_泰式鱼虾蟹
+WOW	Baccarat_百家乐
+GFG	Banker Three-Facecard_抢庄三公
+KM	Thai Hi Lo 2_泰式比高低 2
+7X	Tongits Butasan_Tongits Butasan
+WOW	Roulette_轮盘
+BSP	RUMMY_拉密
+BSP	Texas holdem_德州扑克
+R88	Dragon Tiger_龙虎斗
+KS	Baccarat3_百家乐3
+KM	Bonus Dice_奖金骰子
+JL	Mini Flush_Mini Flush
+KM	European Roulette_欧洲轮盘
+KP	Black Jack_黑杰克
+WOW	Color Game_六色骰
+KM	Fan Tan Classic_番摊经典
+
+JL	Super Ace_超级王牌
+PG	Pinata Wins_墨西哥狂欢
+PG	Wild Bounty Showdown_赏金大对决
+JL	Super Ace Deluxe_超级王牌豪华版
+JL	Golden Empire_黄金帝国
+JL	Fortune Gems 2_迦罗宝石2
+FC	Sugar Bang Bang 2_蜜糖爆击2
+JL	Fortune Gems 3_迦罗宝石3
+PG	Wild Ape#3258_猿宇宙#3258
+JL	Mines_Mines
+JL	Money Coming_疯狂钱来也
+PG	Wild Bandito_亡灵大盗
+PP	Sweet Bonanza 1000_甜入心扉 1000
+PP	Sugar Rush 1000_极速糖果1000
+JL	Fortune Gems_迦罗宝石
+PG	Lucky Neko_招财喵
+FC	Poker Win_至尊王牌
+MW	Mahjong Hit_麻将碰碰
+PG	Treasures of Aztec_寻宝黄金城
+JL	Color Game_Color Game
+FC	Chinese New Year Moreways_大过年路路发
+JL	Boxing King_拳王
+FC	Sugar Bang Bang_蜜糖爆击
+JDB	Magic Ace WILD LOCK_魔幻王牌 WILD LOCK
+JL	Crazy777_疯狂777
+PG	Mahjong Ways 2_麻将胡了2
+FC	JUNGLE BANG BANG_丛林爆击
+PP	Gates of Olympus Super Scatter_奥林匹斯之门超神力
+JL	Super Ace II_超级王牌 II
+JL	Wild Ace_百搭王牌
+PG	Geisha's Revenge_艺伎之刃
+PG	Poker Kingdom Win_扑克王国
+PG	Anubis Wrath_阿努比斯
+JL	Pirate Queen 2_海盗女王2
+FC	Chinese New Year 2_大过年2
+YB	Royal Ace_王牌贵宾
+PG	Cocktail Nights_夜醉佳人
+YB	Dragon Gems_好运龙宝
+FC	Super Elements_元素狂潮
+PP	Gates of Olympus 1000_奥林匹斯之门 1000
+FC	Lucky Fortunes_财富连连
+JL	Circus Joker 4096_馬戲團小丑 4096
+JL	3 Super Ace_3 超級王牌
+JL	Fortune Coins_幸运金币
+BNG	Lucky Penny_幸运币大亨
+JL	Mines Gold_Mines Gold
+PP	Sweet Rush Bonanza_甜心糖果大富翁
+JL	Jackpot Bingo_Jackpot Bingo
+PG	Mahjong Ways_麻将胡了
+PT	Premium Blackjack Single Hand_高级21点 - 单手
+
+BTI	Basketball_篮球
+DS88	Sabong_斗鸡
+1BET	Cockfight_斗鸡
+BTI	combo_组合投注
+PIN	Basketball_篮球
+UG2	Basketball_篮球
+BTI	NBA2K_NBA2K
+TF	Dota 2_刀塔 2
+TF	CS:GO_反恐精英
+BTI	TENNIS_网球
+BTI	Soccer_足球
+PIN	Parlay selection_混合过关
+BTI	Dota2_刀塔2
+3S2	Basketball_篮球
+BTI	Volleyball_排球
+UG2	Soccer_足球
+TF	League of Legends_英雄联盟
+PIN	E-Sports_电子竞技
+PIN	Soccer_足球
+BTI	Table Tennis_乒乓球
+PIN	TENNIS_网球
+TF	Valorant_无畏契约
+BTI	CS2_反恐精英 2
+3S2	Soccer_足球
+BTI	LOL_LOL
+TF	King of Glory_王者荣耀
+UG2	E-Sports_电子竞技
+TF	Parlay_串关
+BTI	Ice Hockey_冰球
+UG2	Volleyball_排球
+BTI	Boxing_拳击
+UG2	TENNIS_网球
+BTI	FIFA_FIFA
+3S2	Multiple Parlay_多重串关
+PIN	Hockey_曲棍球
+3S2	TENNIS_网球
+BTI	V-Soccer_虚拟足球
+PIN	Volleyball_排球
+BTI	Valorant_无畏契约
+UG2	Parlay_串关
+PIN	Boxing_拳击
+BTI	Football_美式足球
+BTI	MMA_综合格斗
+3S2	Volleyball_排球
+TF	Arena of Valor_传说对决
+BTI	CRICKET_板球
+UG2	Boxing & MMA_拳击
+BTI	Rugby Union_橄榄球联合会
+BTI	Baseball_棒球
+UG2	Baseball_棒球
+
+RNG	AUX	Sweet Gummy_甜蜜软糖
+RNG	RLX	Winter Champions_冬季冠军
+
+FISH	TA	Bombing Fishing_炸鱼来了
+RNG	TA	Jackpot Joker Fever_彩金小丑 狂热
+RNG	PP	Mahjong Wins Super Scatter_麻将大胜超级进财
+RNG	PP	Gates of Olympus 1000_奥林匹斯之门 1000
+RNG	PP	Gates of Olympus_奥林匹斯之门
+RNG	PG	Wild Bounty Showdown_赏金大对决
+FISH	TA	Jackpot Fishing_极速彩金捕鱼
+RNG	PP	Gates of Olympus Super Scatter_奥林匹斯之门超神力
+RNG	PP	Sweet Bonanza 1000_甜入心扉 1000
+RNG	PG	Lucky Neko_招财喵
+RNG	TA	Clover Coins 3x3_幸运草金币 3x3
+RNG	TA	Fortune Coins_幸运金币
+RNG	TA	Pirate Queen 2_海盗女王2
+RNG	PP	Big Bass Bonanza™_疯狂大鲈鱼™
+RNG	PP	Lucky's Wild Pub_疯狂好运酒吧
+LIVE	PP	One Blackjack 5 -Turkish_唯一二十一点5土耳其
+RNG	PG	Dragon's Treasure Quest_寻龙宝藏
+RNG	PP	Starlight Princess 1000_星光公主 1000
+RNG	PP	Gold Party™_黄金派对™
+RNG	PP	Cash Box™_金库宝藏™
+RNG	PG	Wild Bandito_亡灵大盗
+RNG	TA	Wild Ace_百搭王牌
+RNG	TA	Clover Coins 4x4_幸運草金幣4x4
+RNG	TA	Jackpot Joker_彩金小丑
+RNG	TA	Crazy777 2_疯狂777 2
+RNG	PP	Mummy's Jewels_古墓秘宝
+RNG	TA	100 Blazing Clover_100 Blazing Clover
+RNG	PP	Sweet Bonanza_甜入心扉
+RNG	PP	Sleeping Dragon_沉睡之龙
+RNG	PP	Fire Hot 5_热火 5
+RNG	PG	Treasures of Aztec_寻宝黄金城
+FISH	TA	Boom Legend_夺宝传奇
+RNG	PG	Crypto Gold_比特淘金
+RNG	PG	Gemstones Gold_宝石矿工
+LIVE	PP	Roulette 6  Turkish_轮盘6 土耳其
+FISH	TA	Happy Fishing_开心捕鱼
+RNG	PP	Candy Blitz Bombs_糖果闪电轰炸
+RNG	PP	Super 7s_超级7s
+FISH	TA	Dragon Fortune_飞龙宝藏
+RNG	PP	Peppe's Pepperoni Pizza Plaza_意式腊香肠比萨
+RNG	PP	Fire Hot 40_热火 40
+RNG	PG	Museum Mystery_世界珍宝馆
+RNG	TA	Chicken Dash_Chicken Dash
+RNG	PP	Santa's Xmas Rush_极速圣诞快乐
+RNG	HS	Le Viking_维京传奇
+RNG	PG	Cocktail Nights_夜醉佳人
+RNG	PP	Fortune of Aztec_阿兹特克之宝
+RNG	TA	Money Coming Expanded Bets_疯狂钱来也扩充押注
+RNG	TA	Money Pot_聚宝盆
+RNG	PP	7 Clovers of Fortune_7幸运草
+
+TA	Bombing Fishing_炸鱼来了
+TA	Jackpot Fishing_极速彩金捕鱼
+TA	Boom Legend_夺宝传奇
+TA	Happy Fishing_开心捕鱼
+TA	Dragon Fortune_飞龙宝藏
+TA	Happy Fishing Lightning_一
+TA	Ocean King Jackpot_海洋王大獎
+TA	Mega Fishing_王者捕鱼
+TA	Fortune Zombie Lightning_财富僵尸闪电
+TA	Royal Shooter_Royal Shooter
+FC	Fa Chai Fishing_发财捕鱼
+TA	Dinosaur Tycoon II_猎龙大亨2
+TA	Dinosaur Tycoon_猎龙大亨
