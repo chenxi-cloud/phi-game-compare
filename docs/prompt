@@ -1,0 +1,33 @@
+# Role & Project Context
+你现在是一位精通 Astro 框架和程序化 SEO (pSEO) 的高级前端架构师。我正在构建一个针对菲律宾 iGaming 市场的博彩平台比选网站。我们需要基于 Astro，自动化批量生成数千个对比页面的纯静态 HTML。
+
+# Current Directory Structure
+- 数据文件存放于根目录：`docs/spintax.json` 和 `docs/phi_brands_comprehensive.json`。
+- 页面生成目标路由：`src/pages/reports/[slug].astro`（用于构建 `/reports/A-vs-B/index.html`）。
+- 工具函数存放路径：`src/utils/spintax.ts`。
+
+# Core Architecture Constraints (STRICTLY ENFORCED)
+
+1. 纯静态渲染 (SSG) 与全量路由裂变：
+必须在 `[slug].astro` 文件中使用 Astro 的 `export async function getStaticPaths()`。
+具体逻辑要求：
+- 使用 `fs` 或直接 `import` 读取 `docs/phi_brands_comprehensive.json` 中的全量品牌数组。
+- 使用双重 `for` 循环（如 `let j = i + 1`）遍历该数组，生成所有品牌**两两组合**的数据对，确保跳过自身对比，并且仅生成唯一组合（即生成了 A-vs-B 就不要再生成 B-vs-A，避免镜像重复）。
+- 拼装 URL Slug：例如把 "PlayTime" 和 "BingoPlus" 拼接为 `playtime-vs-bingoplus`（全部转为小写并用连字符替换空格）。
+- 返回路由数组，格式必须为：`return routes.map(route => ({ params: { slug: route.slug }, props: { brandA: route.brandA, brandB: route.brandB } }))`。
+
+2. 防查重内容引擎 (Spintax)：
+在 `src/utils/spintax.ts` 中编写一个工具函数 `generateSummary(moduleName, dataObj, seedSlug)`。该函数将在 Astro 文件的 Frontmatter（构建时的服务器端）中被调用。
+
+3. 绝对确定性随机（Seeded Random - 致命重要）：
+在 `generateSummary` 函数中，**严禁使用任何原生的 `Math.random()`**。
+必须引入 `seedrandom` 库（如项目未安装请提示我 `npm install seedrandom`）。必须使用传入的 `seedSlug` 作为随机种子。
+函数需要读取 `docs/spintax.json`，根据传入的 `moduleName`，利用 seed 随机分别从 `intro`、`data_statement` 和 `conclusion` 中抽取一条文本。将它们拼接成一段完整的段落（中间加空格），并使用传入的 `dataObj` 替换掉文本中的占位符（例如 `{Brand_A}`, `{Time_A}` 等）。确保每次 build 时同一个 slug 生成的文案绝对固定。
+
+4. UI 注入与渲染：
+在 `src/pages/reports/[slug].astro` 的 Frontmatter 中，接收 `Astro.props` 传递的两个品牌数据，并调用 `generateSummary` 生成各个模块（如提现、客服、热度等）的总结文本。将生成的完整文本，作为局部变量渲染在下方 HTML 模板的黑色【总结】卡片框中。
+
+# Task 
+请严格按照以上规则，帮我编写：
+1. `src/utils/spintax.ts`（带有完善的 TypeScript 类型定义）。
+2. `src/pages/reports/[slug].astro` 的主干代码（包含 getStaticPaths 和基础的 HTML 渲染骨架）。

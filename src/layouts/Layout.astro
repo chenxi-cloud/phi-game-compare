@@ -5,11 +5,12 @@ import { REPORTS_PUBLIC } from '@/config/features.mjs';
 interface Props {
   title: string;
   description?: string;
+  noindex?: boolean;
 }
 
-const { title, description = 'Compare the best PAGCOR-licensed online gaming platforms in the Philippines.' } = Astro.props;
+const { title, description = 'Compare the best PAGCOR-licensed online gaming platforms in the Philippines.', noindex = false } = Astro.props;
 
-// Absolute, self-referencing canonical for the current page.
+// Absolute, self-referencing canonical for the current page (skipped when noindex).
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).href;
 ---
 
@@ -19,7 +20,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalURL} />
+    {noindex ? <meta name="robots" content="noindex, follow" /> : <link rel="canonical" href={canonicalURL} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} | PH Game Compare</title>
   </head>

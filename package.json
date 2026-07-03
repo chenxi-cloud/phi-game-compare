@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "rm -rf .astro node_modules/.astro node_modules/.vite && astro dev",
+    "build": "rm -rf .astro node_modules/.astro node_modules/.vite && astro build",
     "preview": "astro preview"
   },
   "dependencies": {

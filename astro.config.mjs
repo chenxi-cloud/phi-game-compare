@@ -9,7 +9,7 @@ import { REPORTS_PUBLIC } from './src/config/features.mjs';
  * exposure. Our own money link (jiliphil.vip) keeps referrer for tracking but
  * still gets `sponsored`; all other external hosts get the full lockdown.
  */
-const MONEY_LINK = 'https://www.jiliphil.vip/register?affiliateCode=seo005';
+const COMING_SOON = '/reports-coming-soon/';
 
 function rehypeAffiliateRel() {
   return (tree) => {
@@ -17,10 +17,10 @@ function rehypeAffiliateRel() {
       if (node.type === 'element' && node.tagName === 'a') {
         let href = node.properties?.href;
         // Soft-launch: in-article links to the hidden comparison reports would
-        // 404. Redirect them to the JiliPhil money link (the anchor text already
-        // promotes JiliPhil), keeping the CTA useful and conversion-focused.
+        // 404. Point every /reports/* link at a single "under construction"
+        // placeholder page instead (the .md files stay untouched).
         if (!REPORTS_PUBLIC && typeof href === 'string' && href.startsWith('/reports/')) {
-          href = MONEY_LINK;
+          href = COMING_SOON;
           node.properties.href = href;
         }
         if (typeof href === 'string' && /^https?:\/\//i.test(href)) {
@@ -43,8 +43,8 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) => {
-        // Cloaked redirects never belong in a sitemap.
-        if (page.includes('/out/')) return false;
+        // Cloaked redirects and the placeholder page never belong in a sitemap.
+        if (page.includes('/out/') || page.includes('/reports-coming-soon')) return false;
         // Keep the hidden comparison layer out of the sitemap during soft-launch.
         if (!REPORTS_PUBLIC && (page.includes('/reports/') || page.includes('/all-comparisons'))) {
           return false;

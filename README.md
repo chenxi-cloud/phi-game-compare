@@ -58,3 +58,5 @@ npm run preview  # 预览构建结果
 ## 部署
 
 构建产物在 `dist/` 目录，直接上传至任意静态托管即可。部署前请修改 `astro.config.mjs` 中的 `site` 为实际域名。
+
+新增统一开关 src/config/features.mjs 的 REPORTS_PUBLIC = false，整个对比报告体系"隐藏但保留"，将来改成 true 重新构建即可一键全量公开。
