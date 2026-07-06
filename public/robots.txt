@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /
 Disallow: /out/
+Allow: /
 
-Sitemap: https://phi-game-compare.vercel.app/sitemap-index.xml
+Sitemap: https://pagsuribonus.com/sitemap-index.xml
