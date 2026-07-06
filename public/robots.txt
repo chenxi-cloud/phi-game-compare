@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /out/
+
+Sitemap: https://phi-game-compare.vercel.app/sitemap-index.xml
