@@ -38,7 +38,7 @@ function rehypeAffiliateRel() {
 }
 
 export default defineConfig({
-  site: 'https://phi-game-compare.vercel.app',
+  site: 'https://pagsuribonus.com',
   output: 'static',
   integrations: [
     sitemap({
