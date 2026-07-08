@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /out/
 Allow: /
 
-Sitemap: https://pagsuribonus.com/sitemap-index.xml
+Sitemap: https://www.pagsuribonus.com/sitemap-index.xml

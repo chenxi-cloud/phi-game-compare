@@ -38,7 +38,7 @@ function rehypeAffiliateRel() {
 }
 
 export default defineConfig({
-  site: 'https://pagsuribonus.com',
+  site: 'https://www.pagsuribonus.com',
   output: 'static',
   integrations: [
     sitemap({
